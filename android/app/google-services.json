@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "258364703841",
+    "project_id": "handco-51d98",
+    "storage_bucket": "handco-51d98.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:258364703841:android:49ab9f8de18d8a003c9620",
+        "android_client_info": {
+          "package_name": "com.mycompany.handco"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCt7Ijs9dg0tmKjUo_Gtbk0xsdgQjuz3Qc"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
