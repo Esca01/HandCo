@@ -576,7 +576,7 @@ class _ProfileWidgetState extends State<ProfileWidget> {
                                             _model.switchValue = newValue);
                                         if (newValue) {
                                           setDarkModeSetting(
-                                              context, ThemeMode.dark);
+                                              context, ThemeMode.system);
                                         }
                                       },
                                       activeColor:

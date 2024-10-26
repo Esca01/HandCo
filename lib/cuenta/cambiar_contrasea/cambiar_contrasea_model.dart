@@ -5,24 +5,27 @@ import 'package:flutter/material.dart';
 class CambiarContraseaModel extends FlutterFlowModel<CambiarContraseaWidget> {
   ///  State fields for stateful widgets in this page.
 
-  // State field(s) for TextField widget.
-  FocusNode? textFieldFocusNode1;
-  TextEditingController? textController1;
-  String? Function(BuildContext, String?)? textController1Validator;
-  // State field(s) for TextField widget.
-  FocusNode? textFieldFocusNode2;
-  TextEditingController? textController2;
-  String? Function(BuildContext, String?)? textController2Validator;
+  // State field(s) for contrasenaactual widget.
+  FocusNode? contrasenaactualFocusNode;
+  TextEditingController? contrasenaactualTextController;
+  String? Function(BuildContext, String?)?
+      contrasenaactualTextControllerValidator;
+  // State field(s) for nuevacontra widget.
+  FocusNode? nuevacontraFocusNode;
+  TextEditingController? nuevacontraTextController;
+  String? Function(BuildContext, String?)? nuevacontraTextControllerValidator;
+  // Stores action output result for [Custom Action - changePassword] action in Button widget.
+  bool? isChange;
 
   @override
   void initState(BuildContext context) {}
 
   @override
   void dispose() {
-    textFieldFocusNode1?.dispose();
-    textController1?.dispose();
+    contrasenaactualFocusNode?.dispose();
+    contrasenaactualTextController?.dispose();
 
-    textFieldFocusNode2?.dispose();
-    textController2?.dispose();
+    nuevacontraFocusNode?.dispose();
+    nuevacontraTextController?.dispose();
   }
 }

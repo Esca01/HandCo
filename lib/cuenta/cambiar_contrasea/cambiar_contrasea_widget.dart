@@ -1,9 +1,8 @@
 import '/auth/firebase_auth/auth_util.dart';
-import '/backend/backend.dart';
-import '/flutter_flow/flutter_flow_icon_button.dart';
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
 import '/flutter_flow/flutter_flow_widgets.dart';
+import '/custom_code/actions/index.dart' as actions;
 import 'package:flutter/material.dart';
 import 'cambiar_contrasea_model.dart';
 export 'cambiar_contrasea_model.dart';
@@ -25,11 +24,11 @@ class _CambiarContraseaWidgetState extends State<CambiarContraseaWidget> {
     super.initState();
     _model = createModel(context, () => CambiarContraseaModel());
 
-    _model.textController1 ??= TextEditingController();
-    _model.textFieldFocusNode1 ??= FocusNode();
+    _model.contrasenaactualTextController ??= TextEditingController();
+    _model.contrasenaactualFocusNode ??= FocusNode();
 
-    _model.textController2 ??= TextEditingController();
-    _model.textFieldFocusNode2 ??= FocusNode();
+    _model.nuevacontraTextController ??= TextEditingController();
+    _model.nuevacontraFocusNode ??= FocusNode();
 
     WidgetsBinding.instance.addPostFrameCallback((_) => safeSetState(() {}));
   }
@@ -54,28 +53,27 @@ class _CambiarContraseaWidgetState extends State<CambiarContraseaWidget> {
             mainAxisSize: MainAxisSize.max,
             children: [
               Align(
-                alignment: const AlignmentDirectional(1.0, -1.0),
+                alignment: const AlignmentDirectional(-1.0, -1.0),
                 child: Padding(
-                  padding: const EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 12.0, 0.0),
-                  child: FlutterFlowIconButton(
-                    borderColor: FlutterFlowTheme.of(context).alternate,
-                    borderRadius: 12.0,
-                    borderWidth: 1.0,
-                    buttonSize: 40.0,
-                    fillColor: FlutterFlowTheme.of(context).secondaryBackground,
-                    icon: Icon(
-                      Icons.close_rounded,
-                      color: FlutterFlowTheme.of(context).primaryText,
-                      size: 24.0,
-                    ),
-                    onPressed: () async {
+                  padding: const EdgeInsetsDirectional.fromSTEB(15.0, 46.0, 0.0, 0.0),
+                  child: InkWell(
+                    splashColor: Colors.transparent,
+                    focusColor: Colors.transparent,
+                    hoverColor: Colors.transparent,
+                    highlightColor: Colors.transparent,
+                    onTap: () async {
                       context.safePop();
                     },
+                    child: Icon(
+                      Icons.arrow_back,
+                      color: FlutterFlowTheme.of(context).primaryText,
+                      size: 33.0,
+                    ),
                   ),
                 ),
               ),
               Padding(
-                padding: const EdgeInsetsDirectional.fromSTEB(16.0, 20.0, 16.0, 0.0),
+                padding: const EdgeInsetsDirectional.fromSTEB(32.0, 20.0, 32.0, 0.0),
                 child: Column(
                   mainAxisSize: MainAxisSize.max,
                   children: [
@@ -106,13 +104,13 @@ class _CambiarContraseaWidgetState extends State<CambiarContraseaWidget> {
                       padding:
                           const EdgeInsetsDirectional.fromSTEB(0.0, 45.0, 0.0, 21.0),
                       child: TextFormField(
-                        controller: _model.textController1,
-                        focusNode: _model.textFieldFocusNode1,
+                        controller: _model.contrasenaactualTextController,
+                        focusNode: _model.contrasenaactualFocusNode,
                         autofocus: false,
                         obscureText: false,
                         decoration: InputDecoration(
-                          labelText: 'Nueva Contraseña',
-                          hintText: 'Ingrese nueva contraseña...',
+                          labelText: 'Contraseña Actual',
+                          hintText: 'Ingrese contraseña actual...',
                           hintStyle:
                               FlutterFlowTheme.of(context).bodyLarge.override(
                                     fontFamily: 'Readex Pro',
@@ -151,7 +149,8 @@ class _CambiarContraseaWidgetState extends State<CambiarContraseaWidget> {
                               fontFamily: 'Readex Pro',
                               letterSpacing: 0.0,
                             ),
-                        validator: _model.textController1Validator
+                        validator: _model
+                            .contrasenaactualTextControllerValidator
                             .asValidator(context),
                       ),
                     ),
@@ -159,13 +158,13 @@ class _CambiarContraseaWidgetState extends State<CambiarContraseaWidget> {
                       padding:
                           const EdgeInsetsDirectional.fromSTEB(0.0, 10.0, 0.0, 0.0),
                       child: TextFormField(
-                        controller: _model.textController2,
-                        focusNode: _model.textFieldFocusNode2,
+                        controller: _model.nuevacontraTextController,
+                        focusNode: _model.nuevacontraFocusNode,
                         autofocus: false,
                         obscureText: false,
                         decoration: InputDecoration(
-                          labelText: 'Confirmar Contraseña',
-                          hintText: 'Confirme nueva contraseña...',
+                          labelText: 'Nueva Contraseña',
+                          hintText: 'Nueva contraseña...',
                           hintStyle:
                               FlutterFlowTheme.of(context).bodyLarge.override(
                                     fontFamily: 'Readex Pro',
@@ -204,7 +203,7 @@ class _CambiarContraseaWidgetState extends State<CambiarContraseaWidget> {
                               fontFamily: 'Readex Pro',
                               letterSpacing: 0.0,
                             ),
-                        validator: _model.textController2Validator
+                        validator: _model.nuevacontraTextControllerValidator
                             .asValidator(context),
                       ),
                     ),
@@ -212,14 +211,61 @@ class _CambiarContraseaWidgetState extends State<CambiarContraseaWidget> {
                 ),
               ),
               Padding(
-                padding: const EdgeInsetsDirectional.fromSTEB(0.0, 41.0, 0.0, 0.0),
+                padding: const EdgeInsetsDirectional.fromSTEB(32.0, 41.0, 32.0, 0.0),
                 child: FFButtonWidget(
                   onPressed: () async {
-                    await currentUserReference!.update(createUsersRecordData(
-                      contrasena: _model.textController1.text,
-                    ));
+                    Function() navigate = () {};
+                    _model.isChange = await actions.changePassword(
+                      context,
+                      _model.contrasenaactualTextController.text,
+                      _model.nuevacontraTextController.text,
+                    );
+                    if (_model.isChange!) {
+                      GoRouter.of(context).prepareAuthEvent();
+                      await authManager.signOut();
+                      GoRouter.of(context).clearRedirectLocation();
 
-                    context.pushNamed('Dashboard');
+                      navigate = () =>
+                          context.goNamedAuth('HomePage', context.mounted);
+                      ScaffoldMessenger.of(context).showSnackBar(
+                        const SnackBar(
+                          content: Text(
+                            'Contraseña Actualizada',
+                            style: TextStyle(
+                              color: Colors.black,
+                            ),
+                          ),
+                          duration: Duration(milliseconds: 4000),
+                          backgroundColor: Color(0xFFC784EB),
+                        ),
+                      );
+                    } else {
+                      await showDialog(
+                        context: context,
+                        builder: (alertDialogContext) {
+                          return AlertDialog(
+                            title: const Text('Contraseña Incorrecta'),
+                            content:
+                                const Text('Revisar la contraseña actual ingresada'),
+                            actions: [
+                              TextButton(
+                                onPressed: () =>
+                                    Navigator.pop(alertDialogContext),
+                                child: const Text('Ok'),
+                              ),
+                            ],
+                          );
+                        },
+                      );
+                      safeSetState(() {
+                        _model.contrasenaactualTextController?.clear();
+                        _model.nuevacontraTextController?.clear();
+                      });
+                    }
+
+                    navigate();
+
+                    safeSetState(() {});
                   },
                   text: 'Cambiar',
                   options: FFButtonOptions(

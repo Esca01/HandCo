@@ -68,9 +68,9 @@ class _PagosWidgetState extends State<PagosWidget> {
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               Padding(
-                padding: const EdgeInsetsDirectional.fromSTEB(16.0, 8.0, 0.0, 0.0),
+                padding: const EdgeInsetsDirectional.fromSTEB(32.0, 8.0, 0.0, 0.0),
                 child: Text(
-                  'Subscription / Payment',
+                  'Suscripción/Pago',
                   style: FlutterFlowTheme.of(context).headlineMedium.override(
                         fontFamily: 'Outfit',
                         letterSpacing: 0.0,
@@ -78,9 +78,9 @@ class _PagosWidgetState extends State<PagosWidget> {
                 ),
               ),
               Padding(
-                padding: const EdgeInsetsDirectional.fromSTEB(16.0, 8.0, 0.0, 0.0),
+                padding: const EdgeInsetsDirectional.fromSTEB(32.0, 8.0, 0.0, 0.0),
                 child: Text(
-                  'Your Subscription',
+                  'Tu suscripción',
                   style: FlutterFlowTheme.of(context).labelMedium.override(
                         fontFamily: 'Readex Pro',
                         letterSpacing: 0.0,
@@ -88,7 +88,7 @@ class _PagosWidgetState extends State<PagosWidget> {
                 ),
               ),
               Padding(
-                padding: const EdgeInsetsDirectional.fromSTEB(16.0, 12.0, 16.0, 0.0),
+                padding: const EdgeInsetsDirectional.fromSTEB(32.0, 12.0, 32.0, 0.0),
                 child: Container(
                   width: double.infinity,
                   decoration: BoxDecoration(
@@ -113,54 +113,58 @@ class _PagosWidgetState extends State<PagosWidget> {
                       mainAxisAlignment: MainAxisAlignment.center,
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
-                        Theme(
-                          data: ThemeData(
-                            checkboxTheme: CheckboxThemeData(
-                              shape: RoundedRectangleBorder(
-                                borderRadius: BorderRadius.circular(25),
+                        Material(
+                          color: Colors.transparent,
+                          child: Theme(
+                            data: ThemeData(
+                              checkboxTheme: CheckboxThemeData(
+                                shape: RoundedRectangleBorder(
+                                  borderRadius: BorderRadius.circular(25),
+                                ),
                               ),
+                              unselectedWidgetColor:
+                                  FlutterFlowTheme.of(context).secondaryText,
                             ),
-                            unselectedWidgetColor: const Color(0xFF95A1AC),
-                          ),
-                          child: CheckboxListTile(
-                            value: _model.checkboxListTileValue1 ??= true,
-                            onChanged: (newValue) async {
-                              safeSetState(() =>
-                                  _model.checkboxListTileValue1 = newValue!);
-                            },
-                            title: Text(
-                              'Monthly',
-                              style: FlutterFlowTheme.of(context)
-                                  .labelSmall
-                                  .override(
-                                    fontFamily: 'Readex Pro',
-                                    letterSpacing: 0.0,
-                                  ),
+                            child: CheckboxListTile(
+                              value: _model.checkboxListTileValue1 ??= true,
+                              onChanged: (newValue) async {
+                                safeSetState(() =>
+                                    _model.checkboxListTileValue1 = newValue!);
+                              },
+                              title: Text(
+                                'Mes',
+                                style: FlutterFlowTheme.of(context)
+                                    .labelSmall
+                                    .override(
+                                      fontFamily: 'Readex Pro',
+                                      letterSpacing: 0.0,
+                                    ),
+                              ),
+                              subtitle: Text(
+                                '\$20.000/mes',
+                                style: FlutterFlowTheme.of(context)
+                                    .headlineMedium
+                                    .override(
+                                      fontFamily: 'Outfit',
+                                      letterSpacing: 0.0,
+                                    ),
+                              ),
+                              tileColor: FlutterFlowTheme.of(context)
+                                  .primaryBackground,
+                              activeColor: FlutterFlowTheme.of(context).primary,
+                              checkColor: Colors.white,
+                              dense: false,
+                              controlAffinity: ListTileControlAffinity.trailing,
+                              contentPadding: const EdgeInsetsDirectional.fromSTEB(
+                                  12.0, 0.0, 12.0, 0.0),
                             ),
-                            subtitle: Text(
-                              '\$15.99/mo',
-                              style: FlutterFlowTheme.of(context)
-                                  .headlineMedium
-                                  .override(
-                                    fontFamily: 'Outfit',
-                                    letterSpacing: 0.0,
-                                  ),
-                            ),
-                            tileColor:
-                                FlutterFlowTheme.of(context).primaryBackground,
-                            activeColor: FlutterFlowTheme.of(context).primary,
-                            checkColor: Colors.white,
-                            dense: false,
-                            controlAffinity: ListTileControlAffinity.trailing,
-                            contentPadding: const EdgeInsetsDirectional.fromSTEB(
-                                12.0, 0.0, 12.0, 0.0),
                           ),
                         ),
                         Padding(
                           padding: const EdgeInsetsDirectional.fromSTEB(
                               12.0, 0.0, 24.0, 0.0),
                           child: Text(
-                            'Gain unlimited access to all the content we have to offer! ',
+                            '¡Obtenga acceso ilimitado a todo el contenido que tenemos para ofrecer!',
                             style: FlutterFlowTheme.of(context)
                                 .labelMedium
                                 .override(
@@ -175,7 +179,7 @@ class _PagosWidgetState extends State<PagosWidget> {
                 ),
               ),
               Padding(
-                padding: const EdgeInsetsDirectional.fromSTEB(16.0, 8.0, 0.0, 0.0),
+                padding: const EdgeInsetsDirectional.fromSTEB(32.0, 8.0, 0.0, 0.0),
                 child: Text(
                   'Other Offers',
                   style: FlutterFlowTheme.of(context).labelMedium.override(
@@ -185,7 +189,7 @@ class _PagosWidgetState extends State<PagosWidget> {
                 ),
               ),
               Padding(
-                padding: const EdgeInsetsDirectional.fromSTEB(16.0, 12.0, 16.0, 0.0),
+                padding: const EdgeInsetsDirectional.fromSTEB(32.0, 12.0, 32.0, 0.0),
                 child: Container(
                   width: double.infinity,
                   decoration: BoxDecoration(
@@ -210,55 +214,58 @@ class _PagosWidgetState extends State<PagosWidget> {
                       mainAxisAlignment: MainAxisAlignment.center,
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
-                        Theme(
-                          data: ThemeData(
-                            checkboxTheme: CheckboxThemeData(
-                              shape: RoundedRectangleBorder(
-                                borderRadius: BorderRadius.circular(25),
+                        Material(
+                          color: Colors.transparent,
+                          child: Theme(
+                            data: ThemeData(
+                              checkboxTheme: CheckboxThemeData(
+                                shape: RoundedRectangleBorder(
+                                  borderRadius: BorderRadius.circular(25),
+                                ),
                               ),
+                              unselectedWidgetColor:
+                                  FlutterFlowTheme.of(context).primary,
                             ),
-                            unselectedWidgetColor:
-                                FlutterFlowTheme.of(context).secondaryText,
-                          ),
-                          child: CheckboxListTile(
-                            value: _model.checkboxListTileValue2 ??= false,
-                            onChanged: (newValue) async {
-                              safeSetState(() =>
-                                  _model.checkboxListTileValue2 = newValue!);
-                            },
-                            title: Text(
-                              'Annual (save \$12)',
-                              style: FlutterFlowTheme.of(context)
-                                  .labelSmall
-                                  .override(
-                                    fontFamily: 'Readex Pro',
-                                    letterSpacing: 0.0,
-                                  ),
+                            child: CheckboxListTile(
+                              value: _model.checkboxListTileValue2 ??= false,
+                              onChanged: (newValue) async {
+                                safeSetState(() =>
+                                    _model.checkboxListTileValue2 = newValue!);
+                              },
+                              title: Text(
+                                'Año(Ahorra)',
+                                style: FlutterFlowTheme.of(context)
+                                    .labelSmall
+                                    .override(
+                                      fontFamily: 'Readex Pro',
+                                      letterSpacing: 0.0,
+                                    ),
+                              ),
+                              subtitle: Text(
+                                '\$240.000/año',
+                                style: FlutterFlowTheme.of(context)
+                                    .headlineMedium
+                                    .override(
+                                      fontFamily: 'Outfit',
+                                      letterSpacing: 0.0,
+                                    ),
+                              ),
+                              tileColor: FlutterFlowTheme.of(context)
+                                  .primaryBackground,
+                              activeColor: FlutterFlowTheme.of(context).primary,
+                              checkColor: Colors.white,
+                              dense: false,
+                              controlAffinity: ListTileControlAffinity.trailing,
+                              contentPadding: const EdgeInsetsDirectional.fromSTEB(
+                                  12.0, 0.0, 12.0, 0.0),
                             ),
-                            subtitle: Text(
-                              '\$180/yr',
-                              style: FlutterFlowTheme.of(context)
-                                  .headlineMedium
-                                  .override(
-                                    fontFamily: 'Outfit',
-                                    letterSpacing: 0.0,
-                                  ),
-                            ),
-                            tileColor:
-                                FlutterFlowTheme.of(context).primaryBackground,
-                            activeColor: FlutterFlowTheme.of(context).primary,
-                            checkColor: Colors.white,
-                            dense: false,
-                            controlAffinity: ListTileControlAffinity.trailing,
-                            contentPadding: const EdgeInsetsDirectional.fromSTEB(
-                                12.0, 0.0, 12.0, 0.0),
                           ),
                         ),
                         Padding(
                           padding: const EdgeInsetsDirectional.fromSTEB(
                               12.0, 0.0, 24.0, 0.0),
                           child: Text(
-                            'Gain unlimited access to all the content we have to offer! ',
+                            '¡Obtenga acceso ilimitado a todo el contenido que tenemos para ofrecer!',
                             style: FlutterFlowTheme.of(context)
                                 .labelMedium
                                 .override(
@@ -273,7 +280,7 @@ class _PagosWidgetState extends State<PagosWidget> {
                 ),
               ),
               Padding(
-                padding: const EdgeInsetsDirectional.fromSTEB(16.0, 12.0, 16.0, 0.0),
+                padding: const EdgeInsetsDirectional.fromSTEB(32.0, 12.0, 32.0, 0.0),
                 child: Container(
                   width: double.infinity,
                   decoration: BoxDecoration(
@@ -290,8 +297,8 @@ class _PagosWidgetState extends State<PagosWidget> {
                     ],
                     borderRadius: BorderRadius.circular(8.0),
                   ),
-                  child: Padding(
-                    padding: const EdgeInsetsDirectional.fromSTEB(0.0, 8.0, 0.0, 8.0),
+                  child: Material(
+                    color: Colors.transparent,
                     child: Theme(
                       data: ThemeData(
                         checkboxTheme: CheckboxThemeData(
@@ -309,7 +316,7 @@ class _PagosWidgetState extends State<PagosWidget> {
                               () => _model.checkboxListTileValue3 = newValue!);
                         },
                         title: Text(
-                          'Free Limited Access',
+                          'Versión gratis',
                           style: FlutterFlowTheme.of(context)
                               .headlineSmall
                               .override(
@@ -319,7 +326,7 @@ class _PagosWidgetState extends State<PagosWidget> {
                               ),
                         ),
                         subtitle: Text(
-                          'Continue with limited access at no cost. Browse blogs and videos aimed to help you in your journey!',
+                          'Continuar con acceso limitado sin costo. ¡Explore blogs y vídeos destinados a ayudarle en su viaje!',
                           style:
                               FlutterFlowTheme.of(context).bodySmall.override(
                                     fontFamily: 'Readex Pro',
@@ -341,12 +348,12 @@ class _PagosWidgetState extends State<PagosWidget> {
               ),
               Expanded(
                 child: Align(
-                  alignment: const AlignmentDirectional(0.0, 0.0),
+                  alignment: const AlignmentDirectional(-1.0, 0.0),
                   child: Padding(
                     padding:
-                        const EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 24.0),
+                        const EdgeInsetsDirectional.fromSTEB(32.0, 0.0, 32.0, 24.0),
                     child: Column(
-                      mainAxisSize: MainAxisSize.max,
+                      mainAxisSize: MainAxisSize.min,
                       mainAxisAlignment: MainAxisAlignment.end,
                       children: [
                         FFButtonWidget(
@@ -355,13 +362,13 @@ class _PagosWidgetState extends State<PagosWidget> {
                           },
                           text: 'Change Plan',
                           options: FFButtonOptions(
-                            width: 270.0,
+                            width: 324.0,
                             height: 50.0,
                             padding: const EdgeInsetsDirectional.fromSTEB(
                                 0.0, 0.0, 0.0, 0.0),
                             iconPadding: const EdgeInsetsDirectional.fromSTEB(
                                 0.0, 0.0, 0.0, 0.0),
-                            color: FlutterFlowTheme.of(context).primaryText,
+                            color: FlutterFlowTheme.of(context).primary,
                             textStyle: FlutterFlowTheme.of(context)
                                 .titleSmall
                                 .override(

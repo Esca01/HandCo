@@ -15,3 +15,4 @@ export '/eps2/eps2_widget.dart' show Eps2Widget;
 export '/pension2/pension2_widget.dart' show Pension2Widget;
 export '/terceros/eps/eps_widget.dart' show EpsWidget;
 export '/terceros/pension/pension_widget.dart' show PensionWidget;
+export '/creacion_de_cuenta/datos/datos_widget.dart' show DatosWidget;

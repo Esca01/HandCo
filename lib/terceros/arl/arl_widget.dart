@@ -120,42 +120,85 @@ class _ArlWidgetState extends State<ArlWidget> with TickerProviderStateMixin {
                     mainAxisSize: MainAxisSize.max,
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
-                      Padding(
-                        padding:
-                            const EdgeInsetsDirectional.fromSTEB(24.0, 0.0, 0.0, 0.0),
-                        child: Text(
-                          'Hola, Adriana',
-                          style: FlutterFlowTheme.of(context)
-                              .displaySmall
-                              .override(
-                                fontFamily: 'Outfit',
-                                letterSpacing: 0.0,
-                              ),
-                        ),
-                      ),
-                      Opacity(
-                        opacity: 0.8,
-                        child: Padding(
-                          padding: const EdgeInsetsDirectional.fromSTEB(
-                              24.0, 4.0, 0.0, 0.0),
-                          child: Text(
-                            'Bienvenido a SURA',
-                            textAlign: TextAlign.start,
-                            style: FlutterFlowTheme.of(context)
-                                .labelMedium
-                                .override(
-                                  fontFamily: 'Readex Pro',
-                                  color:
-                                      FlutterFlowTheme.of(context).primaryText,
-                                  fontSize: 20.0,
-                                  letterSpacing: 0.0,
-                                ),
+                      Row(
+                        mainAxisSize: MainAxisSize.max,
+                        children: [
+                          Padding(
+                            padding: const EdgeInsetsDirectional.fromSTEB(
+                                32.0, 12.0, 4.0, 0.0),
+                            child: Text(
+                              'Hola,',
+                              style: FlutterFlowTheme.of(context)
+                                  .displaySmall
+                                  .override(
+                                    fontFamily: 'Outfit',
+                                    letterSpacing: 0.0,
+                                  ),
+                            ),
                           ),
-                        ),
+                          Padding(
+                            padding: const EdgeInsetsDirectional.fromSTEB(
+                                0.0, 12.0, 32.0, 0.0),
+                            child: Text(
+                              '',
+                              style: FlutterFlowTheme.of(context)
+                                  .displaySmall
+                                  .override(
+                                    fontFamily: 'Outfit',
+                                    letterSpacing: 0.0,
+                                  ),
+                            ),
+                          ),
+                        ],
+                      ),
+                      Row(
+                        mainAxisSize: MainAxisSize.max,
+                        children: [
+                          Opacity(
+                            opacity: 0.8,
+                            child: Padding(
+                              padding: const EdgeInsetsDirectional.fromSTEB(
+                                  32.0, 4.0, 7.0, 0.0),
+                              child: Text(
+                                'Bienvenido a',
+                                textAlign: TextAlign.start,
+                                style: FlutterFlowTheme.of(context)
+                                    .labelMedium
+                                    .override(
+                                      fontFamily: 'Readex Pro',
+                                      color: FlutterFlowTheme.of(context)
+                                          .primaryText,
+                                      fontSize: 20.0,
+                                      letterSpacing: 0.0,
+                                    ),
+                              ),
+                            ),
+                          ),
+                          Opacity(
+                            opacity: 0.8,
+                            child: Padding(
+                              padding: const EdgeInsetsDirectional.fromSTEB(
+                                  0.0, 4.0, 32.0, 0.0),
+                              child: Text(
+                                '',
+                                textAlign: TextAlign.start,
+                                style: FlutterFlowTheme.of(context)
+                                    .labelMedium
+                                    .override(
+                                      fontFamily: 'Readex Pro',
+                                      color: FlutterFlowTheme.of(context)
+                                          .primaryText,
+                                      fontSize: 20.0,
+                                      letterSpacing: 0.0,
+                                    ),
+                              ),
+                            ),
+                          ),
+                        ],
                       ),
                       Padding(
                         padding: const EdgeInsetsDirectional.fromSTEB(
-                            24.0, 12.0, 24.0, 12.0),
+                            32.0, 12.0, 32.0, 12.0),
                         child: Text(
                           'Con tu ARL te encuentras seguro en los riesgos laborales que se te pueden presentar.',
                           textAlign: TextAlign.start,
@@ -184,7 +227,7 @@ class _ArlWidgetState extends State<ArlWidget> with TickerProviderStateMixin {
                           children: [
                             Padding(
                               padding: const EdgeInsetsDirectional.fromSTEB(
-                                  24.0, 12.0, 24.0, 12.0),
+                                  32.0, 12.0, 32.0, 12.0),
                               child: Container(
                                 width: double.infinity,
                                 constraints: const BoxConstraints(
@@ -195,7 +238,7 @@ class _ArlWidgetState extends State<ArlWidget> with TickerProviderStateMixin {
                                       .secondaryBackground,
                                   borderRadius: BorderRadius.circular(8.0),
                                   border: Border.all(
-                                    color: const Color(0xFF092851),
+                                    color: const Color(0xFF4B39EF),
                                     width: 2.0,
                                   ),
                                 ),
@@ -232,7 +275,7 @@ class _ArlWidgetState extends State<ArlWidget> with TickerProviderStateMixin {
                                               const EdgeInsetsDirectional.fromSTEB(
                                                   2.0, 2.0, 0.0, 0.0),
                                           child: Text(
-                                            'Activo',
+                                            '',
                                             style: FlutterFlowTheme.of(context)
                                                 .bodyLarge
                                                 .override(
@@ -249,7 +292,7 @@ class _ArlWidgetState extends State<ArlWidget> with TickerProviderStateMixin {
                             ),
                             Padding(
                               padding: const EdgeInsetsDirectional.fromSTEB(
-                                  24.0, 0.0, 24.0, 12.0),
+                                  32.0, 0.0, 32.0, 12.0),
                               child: Container(
                                 width: double.infinity,
                                 constraints: const BoxConstraints(
@@ -260,7 +303,7 @@ class _ArlWidgetState extends State<ArlWidget> with TickerProviderStateMixin {
                                       .secondaryBackground,
                                   borderRadius: BorderRadius.circular(8.0),
                                   border: Border.all(
-                                    color: const Color(0xFF051225),
+                                    color: const Color(0xFF4B39EF),
                                     width: 2.0,
                                   ),
                                 ),
@@ -300,7 +343,7 @@ class _ArlWidgetState extends State<ArlWidget> with TickerProviderStateMixin {
                                                     .fromSTEB(
                                                         0.0, 4.0, 0.0, 0.0),
                                                 child: Text(
-                                                  'No cuenta con incapacidad hasta el día de hoy.',
+                                                  '',
                                                   style: FlutterFlowTheme.of(
                                                           context)
                                                       .labelMedium
@@ -322,7 +365,7 @@ class _ArlWidgetState extends State<ArlWidget> with TickerProviderStateMixin {
                             ),
                             Padding(
                               padding: const EdgeInsetsDirectional.fromSTEB(
-                                  24.0, 0.0, 24.0, 12.0),
+                                  32.0, 0.0, 32.0, 12.0),
                               child: Container(
                                 width: double.infinity,
                                 constraints: const BoxConstraints(
@@ -333,7 +376,7 @@ class _ArlWidgetState extends State<ArlWidget> with TickerProviderStateMixin {
                                       .secondaryBackground,
                                   borderRadius: BorderRadius.circular(8.0),
                                   border: Border.all(
-                                    color: const Color(0xFF040D1B),
+                                    color: const Color(0xFF4B39EF),
                                     width: 2.0,
                                   ),
                                 ),
@@ -402,7 +445,7 @@ class _ArlWidgetState extends State<ArlWidget> with TickerProviderStateMixin {
                 ),
               ),
               Padding(
-                padding: const EdgeInsetsDirectional.fromSTEB(16.0, 0.0, 16.0, 12.0),
+                padding: const EdgeInsetsDirectional.fromSTEB(32.0, 0.0, 32.0, 12.0),
                 child: FFButtonWidget(
                   onPressed: () {
                     print('Button pressed ...');
@@ -424,7 +467,7 @@ class _ArlWidgetState extends State<ArlWidget> with TickerProviderStateMixin {
                       color: FlutterFlowTheme.of(context).primary,
                       width: 2.0,
                     ),
-                    borderRadius: BorderRadius.circular(50.0),
+                    borderRadius: BorderRadius.circular(12.0),
                   ),
                 ),
               ),

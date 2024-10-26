@@ -76,7 +76,7 @@ class _EditarperfilWidgetState extends State<EditarperfilWidget> {
                           hoverColor: Colors.transparent,
                           highlightColor: Colors.transparent,
                           onTap: () async {
-                            context.safePop();
+                            context.pushNamed('Dashboard');
                           },
                           child: Icon(
                             Icons.arrow_back,
@@ -88,7 +88,7 @@ class _EditarperfilWidgetState extends State<EditarperfilWidget> {
                     ),
                     Padding(
                       padding: const EdgeInsetsDirectional.fromSTEB(
-                          16.0, 16.0, 16.0, 16.0),
+                          32.0, 16.0, 32.0, 16.0),
                       child: Container(
                         width: double.infinity,
                         height: 200.0,
@@ -291,7 +291,7 @@ class _EditarperfilWidgetState extends State<EditarperfilWidget> {
                     ),
                     Padding(
                       padding: const EdgeInsetsDirectional.fromSTEB(
-                          16.0, 16.0, 16.0, 16.0),
+                          32.0, 16.0, 32.0, 16.0),
                       child: Container(
                         width: double.infinity,
                         decoration: BoxDecoration(
@@ -303,18 +303,22 @@ class _EditarperfilWidgetState extends State<EditarperfilWidget> {
                           mainAxisSize: MainAxisSize.max,
                           crossAxisAlignment: CrossAxisAlignment.start,
                           children: [
-                            Text(
-                              'Nombre de usuario',
-                              style: FlutterFlowTheme.of(context)
-                                  .labelMedium
-                                  .override(
-                                    fontFamily: 'Readex Pro',
-                                    letterSpacing: 0.0,
-                                  ),
+                            Padding(
+                              padding: const EdgeInsetsDirectional.fromSTEB(
+                                  16.0, 0.0, 0.0, 0.0),
+                              child: Text(
+                                'Nombre de usuario',
+                                style: FlutterFlowTheme.of(context)
+                                    .labelMedium
+                                    .override(
+                                      fontFamily: 'Readex Pro',
+                                      letterSpacing: 0.0,
+                                    ),
+                              ),
                             ),
                             Padding(
                               padding: const EdgeInsetsDirectional.fromSTEB(
-                                  0.0, 0.0, 16.0, 20.0),
+                                  16.0, 4.0, 16.0, 20.0),
                               child: AuthUserStreamWidget(
                                 builder: (context) => TextFormField(
                                   controller: _model.nombreTextController,
@@ -371,18 +375,22 @@ class _EditarperfilWidgetState extends State<EditarperfilWidget> {
                                 ),
                               ),
                             ),
-                            Text(
-                              'Teléfono',
-                              style: FlutterFlowTheme.of(context)
-                                  .labelMedium
-                                  .override(
-                                    fontFamily: 'Readex Pro',
-                                    letterSpacing: 0.0,
-                                  ),
+                            Padding(
+                              padding: const EdgeInsetsDirectional.fromSTEB(
+                                  16.0, 0.0, 0.0, 0.0),
+                              child: Text(
+                                'Teléfono',
+                                style: FlutterFlowTheme.of(context)
+                                    .labelMedium
+                                    .override(
+                                      fontFamily: 'Readex Pro',
+                                      letterSpacing: 0.0,
+                                    ),
+                              ),
                             ),
                             Padding(
                               padding: const EdgeInsetsDirectional.fromSTEB(
-                                  0.0, 0.0, 16.0, 20.0),
+                                  16.0, 4.0, 16.0, 20.0),
                               child: AuthUserStreamWidget(
                                 builder: (context) => TextFormField(
                                   controller: _model.telefonoTextController,
@@ -440,18 +448,22 @@ class _EditarperfilWidgetState extends State<EditarperfilWidget> {
                                 ),
                               ),
                             ),
-                            Text(
-                              'Edad',
-                              style: FlutterFlowTheme.of(context)
-                                  .labelMedium
-                                  .override(
-                                    fontFamily: 'Readex Pro',
-                                    letterSpacing: 0.0,
-                                  ),
+                            Padding(
+                              padding: const EdgeInsetsDirectional.fromSTEB(
+                                  16.0, 0.0, 0.0, 0.0),
+                              child: Text(
+                                'Edad',
+                                style: FlutterFlowTheme.of(context)
+                                    .labelMedium
+                                    .override(
+                                      fontFamily: 'Readex Pro',
+                                      letterSpacing: 0.0,
+                                    ),
+                              ),
                             ),
                             Padding(
                               padding: const EdgeInsetsDirectional.fromSTEB(
-                                  0.0, 0.0, 16.0, 20.0),
+                                  16.0, 4.0, 16.0, 20.0),
                               child: AuthUserStreamWidget(
                                 builder: (context) => TextFormField(
                                   controller: _model.edadTextController,
@@ -512,18 +524,22 @@ class _EditarperfilWidgetState extends State<EditarperfilWidget> {
                                 ),
                               ),
                             ),
-                            Text(
-                              'Fecha de expedición',
-                              style: FlutterFlowTheme.of(context)
-                                  .labelMedium
-                                  .override(
-                                    fontFamily: 'Readex Pro',
-                                    letterSpacing: 0.0,
-                                  ),
+                            Padding(
+                              padding: const EdgeInsetsDirectional.fromSTEB(
+                                  16.0, 0.0, 0.0, 0.0),
+                              child: Text(
+                                'Fecha de expedición',
+                                style: FlutterFlowTheme.of(context)
+                                    .labelMedium
+                                    .override(
+                                      fontFamily: 'Readex Pro',
+                                      letterSpacing: 0.0,
+                                    ),
+                              ),
                             ),
                             Padding(
                               padding: const EdgeInsetsDirectional.fromSTEB(
-                                  0.0, 0.0, 16.0, 20.0),
+                                  16.0, 4.0, 16.0, 20.0),
                               child: AuthUserStreamWidget(
                                 builder: (context) => TextFormField(
                                   controller: _model.fechadeexpeTextController,

@@ -73,14 +73,14 @@ class _CrearcuentaWidgetState extends State<CrearcuentaWidget> {
                 child: Padding(
                   padding: const EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 12.0, 0.0),
                   child: FlutterFlowIconButton(
-                    borderColor: FlutterFlowTheme.of(context).alternate,
+                    borderColor: Colors.white,
                     borderRadius: 12.0,
                     borderWidth: 1.0,
                     buttonSize: 40.0,
-                    fillColor: FlutterFlowTheme.of(context).secondaryBackground,
-                    icon: Icon(
+                    fillColor: const Color(0xFFF9F9F9),
+                    icon: const Icon(
                       Icons.close_rounded,
-                      color: FlutterFlowTheme.of(context).primaryText,
+                      color: Colors.black,
                       size: 24.0,
                     ),
                     onPressed: () async {
@@ -657,6 +657,7 @@ class _CrearcuentaWidgetState extends State<CrearcuentaWidget> {
                                       _model.cedulaTextController.text),
                                   fechaexped:
                                       _model.fechaExpedicionTextController.text,
+                                  photoUrl: '',
                                 ));
 
                             context.goNamedAuth('Dashboard', context.mounted);

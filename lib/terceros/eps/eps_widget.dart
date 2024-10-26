@@ -134,42 +134,85 @@ class _EpsWidgetState extends State<EpsWidget> with TickerProviderStateMixin {
                         mainAxisSize: MainAxisSize.max,
                         crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
-                          Padding(
-                            padding: const EdgeInsetsDirectional.fromSTEB(
-                                24.0, 12.0, 0.0, 0.0),
-                            child: Text(
-                              'Hola, Adriana',
-                              style: FlutterFlowTheme.of(context)
-                                  .displaySmall
-                                  .override(
-                                    fontFamily: 'Outfit',
-                                    letterSpacing: 0.0,
-                                  ),
-                            ),
-                          ),
-                          Opacity(
-                            opacity: 0.8,
-                            child: Padding(
-                              padding: const EdgeInsetsDirectional.fromSTEB(
-                                  24.0, 4.0, 0.0, 0.0),
-                              child: Text(
-                                'Bienvenida a Nueva Eps',
-                                textAlign: TextAlign.start,
-                                style: FlutterFlowTheme.of(context)
-                                    .labelMedium
-                                    .override(
-                                      fontFamily: 'Readex Pro',
-                                      color: FlutterFlowTheme.of(context)
-                                          .primaryText,
-                                      fontSize: 20.0,
-                                      letterSpacing: 0.0,
-                                    ),
+                          Row(
+                            mainAxisSize: MainAxisSize.max,
+                            children: [
+                              Padding(
+                                padding: const EdgeInsetsDirectional.fromSTEB(
+                                    32.0, 12.0, 4.0, 0.0),
+                                child: Text(
+                                  'Hola,',
+                                  style: FlutterFlowTheme.of(context)
+                                      .displaySmall
+                                      .override(
+                                        fontFamily: 'Outfit',
+                                        letterSpacing: 0.0,
+                                      ),
+                                ),
                               ),
-                            ),
+                              Padding(
+                                padding: const EdgeInsetsDirectional.fromSTEB(
+                                    0.0, 12.0, 32.0, 0.0),
+                                child: Text(
+                                  '',
+                                  style: FlutterFlowTheme.of(context)
+                                      .displaySmall
+                                      .override(
+                                        fontFamily: 'Outfit',
+                                        letterSpacing: 0.0,
+                                      ),
+                                ),
+                              ),
+                            ],
+                          ),
+                          Row(
+                            mainAxisSize: MainAxisSize.max,
+                            children: [
+                              Opacity(
+                                opacity: 0.8,
+                                child: Padding(
+                                  padding: const EdgeInsetsDirectional.fromSTEB(
+                                      32.0, 4.0, 7.0, 0.0),
+                                  child: Text(
+                                    'Bienvenido a',
+                                    textAlign: TextAlign.start,
+                                    style: FlutterFlowTheme.of(context)
+                                        .labelMedium
+                                        .override(
+                                          fontFamily: 'Readex Pro',
+                                          color: FlutterFlowTheme.of(context)
+                                              .primaryText,
+                                          fontSize: 20.0,
+                                          letterSpacing: 0.0,
+                                        ),
+                                  ),
+                                ),
+                              ),
+                              Opacity(
+                                opacity: 0.8,
+                                child: Padding(
+                                  padding: const EdgeInsetsDirectional.fromSTEB(
+                                      0.0, 4.0, 32.0, 0.0),
+                                  child: Text(
+                                    '',
+                                    textAlign: TextAlign.start,
+                                    style: FlutterFlowTheme.of(context)
+                                        .labelMedium
+                                        .override(
+                                          fontFamily: 'Readex Pro',
+                                          color: FlutterFlowTheme.of(context)
+                                              .primaryText,
+                                          fontSize: 20.0,
+                                          letterSpacing: 0.0,
+                                        ),
+                                  ),
+                                ),
+                              ),
+                            ],
                           ),
                           Padding(
                             padding: const EdgeInsetsDirectional.fromSTEB(
-                                24.0, 12.0, 24.0, 12.0),
+                                32.0, 12.0, 32.0, 12.0),
                             child: Text(
                               'Este usuario se encuentra afiliado desde el 24 de julio de 2023 hasta el 24 de julio de 2999',
                               textAlign: TextAlign.start,
@@ -194,7 +237,7 @@ class _EpsWidgetState extends State<EpsWidget> with TickerProviderStateMixin {
                               children: [
                                 Padding(
                                   padding: const EdgeInsetsDirectional.fromSTEB(
-                                      24.0, 12.0, 24.0, 12.0),
+                                      32.0, 12.0, 32.0, 12.0),
                                   child: Container(
                                     width: double.infinity,
                                     constraints: const BoxConstraints(
@@ -236,27 +279,14 @@ class _EpsWidgetState extends State<EpsWidget> with TickerProviderStateMixin {
                                                           letterSpacing: 0.0,
                                                         ),
                                               ),
-                                              Text(
-                                                'Contributivo',
-                                                style:
-                                                    FlutterFlowTheme.of(context)
-                                                        .labelMedium
-                                                        .override(
-                                                          fontFamily:
-                                                              'Readex Pro',
-                                                          fontSize: 12.0,
-                                                          letterSpacing: 0.0,
-                                                        ),
-                                              ),
                                             ],
                                           ),
                                           Expanded(
                                             child: Padding(
                                               padding: const EdgeInsetsDirectional
-                                                  .fromSTEB(
-                                                      2.0, 0.0, 0.0, 10.0),
+                                                  .fromSTEB(2.0, 0.0, 0.0, 0.0),
                                               child: Text(
-                                                'Activo',
+                                                '',
                                                 style:
                                                     FlutterFlowTheme.of(context)
                                                         .bodyLarge
@@ -275,7 +305,7 @@ class _EpsWidgetState extends State<EpsWidget> with TickerProviderStateMixin {
                                 ),
                                 Padding(
                                   padding: const EdgeInsetsDirectional.fromSTEB(
-                                      24.0, 0.0, 24.0, 12.0),
+                                      32.0, 0.0, 32.0, 12.0),
                                   child: Container(
                                     width: double.infinity,
                                     constraints: const BoxConstraints(
@@ -328,7 +358,7 @@ class _EpsWidgetState extends State<EpsWidget> with TickerProviderStateMixin {
                                                             .fromSTEB(0.0, 4.0,
                                                                 0.0, 0.0),
                                                     child: Text(
-                                                      'No tiene citas pendientes.',
+                                                      '',
                                                       style: FlutterFlowTheme
                                                               .of(context)
                                                           .labelMedium
@@ -350,7 +380,7 @@ class _EpsWidgetState extends State<EpsWidget> with TickerProviderStateMixin {
                                 ),
                                 Padding(
                                   padding: const EdgeInsetsDirectional.fromSTEB(
-                                      24.0, 0.0, 24.0, 12.0),
+                                      32.0, 0.0, 32.0, 12.0),
                                   child: Container(
                                     width: double.infinity,
                                     constraints: const BoxConstraints(
@@ -403,7 +433,7 @@ class _EpsWidgetState extends State<EpsWidget> with TickerProviderStateMixin {
                                                             .fromSTEB(0.0, 4.0,
                                                                 0.0, 0.0),
                                                     child: Text(
-                                                      'Siguiente pago: Septiembre 26, 2024.',
+                                                      '',
                                                       style: FlutterFlowTheme
                                                               .of(context)
                                                           .labelMedium
@@ -425,7 +455,7 @@ class _EpsWidgetState extends State<EpsWidget> with TickerProviderStateMixin {
                                 ),
                                 Padding(
                                   padding: const EdgeInsetsDirectional.fromSTEB(
-                                      24.0, 0.0, 24.0, 12.0),
+                                      32.0, 0.0, 32.0, 12.0),
                                   child: Container(
                                     width: double.infinity,
                                     constraints: const BoxConstraints(
@@ -516,7 +546,7 @@ class _EpsWidgetState extends State<EpsWidget> with TickerProviderStateMixin {
                 ),
                 Padding(
                   padding:
-                      const EdgeInsetsDirectional.fromSTEB(16.0, 0.0, 16.0, 12.0),
+                      const EdgeInsetsDirectional.fromSTEB(32.0, 0.0, 32.0, 12.0),
                   child: FFButtonWidget(
                     onPressed: () {
                       print('Button pressed ...');
