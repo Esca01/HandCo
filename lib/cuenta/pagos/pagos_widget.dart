@@ -126,7 +126,7 @@ class _PagosWidgetState extends State<PagosWidget> {
                                   FlutterFlowTheme.of(context).secondaryText,
                             ),
                             child: CheckboxListTile(
-                              value: _model.checkboxListTileValue1 ??= true,
+                              value: _model.checkboxListTileValue1 ??= false,
                               onChanged: (newValue) async {
                                 safeSetState(() =>
                                     _model.checkboxListTileValue1 = newValue!);
@@ -137,6 +137,7 @@ class _PagosWidgetState extends State<PagosWidget> {
                                     .labelSmall
                                     .override(
                                       fontFamily: 'Readex Pro',
+                                      color: FlutterFlowTheme.of(context).info,
                                       letterSpacing: 0.0,
                                     ),
                               ),
@@ -146,11 +147,11 @@ class _PagosWidgetState extends State<PagosWidget> {
                                     .headlineMedium
                                     .override(
                                       fontFamily: 'Outfit',
+                                      color: FlutterFlowTheme.of(context).info,
                                       letterSpacing: 0.0,
                                     ),
                               ),
-                              tileColor: FlutterFlowTheme.of(context)
-                                  .primaryBackground,
+                              tileColor: FlutterFlowTheme.of(context).primary,
                               activeColor: FlutterFlowTheme.of(context).primary,
                               checkColor: Colors.white,
                               dense: false,
@@ -224,7 +225,7 @@ class _PagosWidgetState extends State<PagosWidget> {
                                 ),
                               ),
                               unselectedWidgetColor:
-                                  FlutterFlowTheme.of(context).primary,
+                                  FlutterFlowTheme.of(context).secondaryText,
                             ),
                             child: CheckboxListTile(
                               value: _model.checkboxListTileValue2 ??= false,
@@ -238,6 +239,7 @@ class _PagosWidgetState extends State<PagosWidget> {
                                     .labelSmall
                                     .override(
                                       fontFamily: 'Readex Pro',
+                                      color: FlutterFlowTheme.of(context).info,
                                       letterSpacing: 0.0,
                                     ),
                               ),
@@ -247,11 +249,11 @@ class _PagosWidgetState extends State<PagosWidget> {
                                     .headlineMedium
                                     .override(
                                       fontFamily: 'Outfit',
+                                      color: FlutterFlowTheme.of(context).info,
                                       letterSpacing: 0.0,
                                     ),
                               ),
-                              tileColor: FlutterFlowTheme.of(context)
-                                  .primaryBackground,
+                              tileColor: FlutterFlowTheme.of(context).primary,
                               activeColor: FlutterFlowTheme.of(context).primary,
                               checkColor: Colors.white,
                               dense: false,
@@ -321,6 +323,7 @@ class _PagosWidgetState extends State<PagosWidget> {
                               .headlineSmall
                               .override(
                                 fontFamily: 'Outfit',
+                                color: FlutterFlowTheme.of(context).info,
                                 letterSpacing: 0.0,
                                 lineHeight: 1.5,
                               ),
@@ -330,11 +333,11 @@ class _PagosWidgetState extends State<PagosWidget> {
                           style:
                               FlutterFlowTheme.of(context).bodySmall.override(
                                     fontFamily: 'Readex Pro',
+                                    color: FlutterFlowTheme.of(context).info,
                                     letterSpacing: 0.0,
                                   ),
                         ),
-                        tileColor:
-                            FlutterFlowTheme.of(context).primaryBackground,
+                        tileColor: FlutterFlowTheme.of(context).primary,
                         activeColor: FlutterFlowTheme.of(context).primary,
                         checkColor: Colors.white,
                         dense: false,
@@ -373,8 +376,7 @@ class _PagosWidgetState extends State<PagosWidget> {
                                 .titleSmall
                                 .override(
                                   fontFamily: 'Readex Pro',
-                                  color: FlutterFlowTheme.of(context)
-                                      .primaryBackground,
+                                  color: FlutterFlowTheme.of(context).info,
                                   letterSpacing: 0.0,
                                 ),
                             elevation: 2.0,

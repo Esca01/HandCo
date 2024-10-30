@@ -1,3 +1,4 @@
+import '/auth/firebase_auth/auth_util.dart';
 import '/flutter_flow/flutter_flow_animations.dart';
 import '/flutter_flow/flutter_flow_icon_button.dart';
 import '/flutter_flow/flutter_flow_theme.dart';
@@ -139,14 +140,16 @@ class _ArlWidgetState extends State<ArlWidget> with TickerProviderStateMixin {
                           Padding(
                             padding: const EdgeInsetsDirectional.fromSTEB(
                                 0.0, 12.0, 32.0, 0.0),
-                            child: Text(
-                              '',
-                              style: FlutterFlowTheme.of(context)
-                                  .displaySmall
-                                  .override(
-                                    fontFamily: 'Outfit',
-                                    letterSpacing: 0.0,
-                                  ),
+                            child: AuthUserStreamWidget(
+                              builder: (context) => Text(
+                                currentUserDisplayName,
+                                style: FlutterFlowTheme.of(context)
+                                    .displaySmall
+                                    .override(
+                                      fontFamily: 'Outfit',
+                                      letterSpacing: 0.0,
+                                    ),
+                              ),
                             ),
                           ),
                         ],
@@ -179,18 +182,21 @@ class _ArlWidgetState extends State<ArlWidget> with TickerProviderStateMixin {
                             child: Padding(
                               padding: const EdgeInsetsDirectional.fromSTEB(
                                   0.0, 4.0, 32.0, 0.0),
-                              child: Text(
-                                '',
-                                textAlign: TextAlign.start,
-                                style: FlutterFlowTheme.of(context)
-                                    .labelMedium
-                                    .override(
-                                      fontFamily: 'Readex Pro',
-                                      color: FlutterFlowTheme.of(context)
-                                          .primaryText,
-                                      fontSize: 20.0,
-                                      letterSpacing: 0.0,
-                                    ),
+                              child: AuthUserStreamWidget(
+                                builder: (context) => Text(
+                                  valueOrDefault(
+                                      currentUserDocument?.nombrearl, ''),
+                                  textAlign: TextAlign.start,
+                                  style: FlutterFlowTheme.of(context)
+                                      .labelMedium
+                                      .override(
+                                        fontFamily: 'Readex Pro',
+                                        color: FlutterFlowTheme.of(context)
+                                            .primaryText,
+                                        fontSize: 20.0,
+                                        letterSpacing: 0.0,
+                                      ),
+                                ),
                               ),
                             ),
                           ),
@@ -274,14 +280,21 @@ class _ArlWidgetState extends State<ArlWidget> with TickerProviderStateMixin {
                                           padding:
                                               const EdgeInsetsDirectional.fromSTEB(
                                                   2.0, 2.0, 0.0, 0.0),
-                                          child: Text(
-                                            '',
-                                            style: FlutterFlowTheme.of(context)
-                                                .bodyLarge
-                                                .override(
-                                                  fontFamily: 'Readex Pro',
-                                                  letterSpacing: 0.0,
-                                                ),
+                                          child: AuthUserStreamWidget(
+                                            builder: (context) => Text(
+                                              valueOrDefault(
+                                                  currentUserDocument
+                                                      ?.estadoarl,
+                                                  ''),
+                                              style:
+                                                  FlutterFlowTheme.of(context)
+                                                      .bodyLarge
+                                                      .override(
+                                                        fontFamily:
+                                                            'Readex Pro',
+                                                        letterSpacing: 0.0,
+                                                      ),
+                                            ),
                                           ),
                                         ),
                                       ),
@@ -342,16 +355,21 @@ class _ArlWidgetState extends State<ArlWidget> with TickerProviderStateMixin {
                                                 padding: const EdgeInsetsDirectional
                                                     .fromSTEB(
                                                         0.0, 4.0, 0.0, 0.0),
-                                                child: Text(
-                                                  '',
-                                                  style: FlutterFlowTheme.of(
-                                                          context)
-                                                      .labelMedium
-                                                      .override(
-                                                        fontFamily:
-                                                            'Readex Pro',
-                                                        letterSpacing: 0.0,
-                                                      ),
+                                                child: AuthUserStreamWidget(
+                                                  builder: (context) => Text(
+                                                    valueOrDefault(
+                                                        currentUserDocument
+                                                            ?.incapacidad,
+                                                        ''),
+                                                    style: FlutterFlowTheme.of(
+                                                            context)
+                                                        .labelMedium
+                                                        .override(
+                                                          fontFamily:
+                                                              'Readex Pro',
+                                                          letterSpacing: 0.0,
+                                                        ),
+                                                  ),
                                                 ),
                                               ),
                                             ],
@@ -450,7 +468,7 @@ class _ArlWidgetState extends State<ArlWidget> with TickerProviderStateMixin {
                   onPressed: () {
                     print('Button pressed ...');
                   },
-                  text: 'Certificate',
+                  text: 'Certificado',
                   options: FFButtonOptions(
                     width: double.infinity,
                     height: 52.0,
@@ -461,6 +479,7 @@ class _ArlWidgetState extends State<ArlWidget> with TickerProviderStateMixin {
                     textStyle:
                         FlutterFlowTheme.of(context).titleMedium.override(
                               fontFamily: 'Readex Pro',
+                              fontSize: 16.0,
                               letterSpacing: 0.0,
                             ),
                     borderSide: BorderSide(

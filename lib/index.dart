@@ -3,7 +3,8 @@ export '/cuenta/profile/profile_widget.dart' show ProfileWidget;
 export '/cuenta/dashboard/dashboard_widget.dart' show DashboardWidget;
 export '/cuenta/pagos/pagos_widget.dart' show PagosWidget;
 export '/terceros/arl/arl_widget.dart' show ArlWidget;
-export '/inicio/home_page/home_page_widget.dart' show HomePageWidget;
+export '/creacion_de_cuenta/inicio/home_page/home_page_widget.dart'
+    show HomePageWidget;
 export '/enconstruccion/en_construccion/en_construccion_widget.dart'
     show EnConstruccionWidget;
 export '/creacion_de_cuenta/crearcuenta/crearcuenta_widget.dart'

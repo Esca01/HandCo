@@ -1,3 +1,4 @@
+import '/auth/firebase_auth/auth_util.dart';
 import '/flutter_flow/flutter_flow_animations.dart';
 import '/flutter_flow/flutter_flow_icon_button.dart';
 import '/flutter_flow/flutter_flow_theme.dart';
@@ -153,14 +154,16 @@ class _EpsWidgetState extends State<EpsWidget> with TickerProviderStateMixin {
                               Padding(
                                 padding: const EdgeInsetsDirectional.fromSTEB(
                                     0.0, 12.0, 32.0, 0.0),
-                                child: Text(
-                                  '',
-                                  style: FlutterFlowTheme.of(context)
-                                      .displaySmall
-                                      .override(
-                                        fontFamily: 'Outfit',
-                                        letterSpacing: 0.0,
-                                      ),
+                                child: AuthUserStreamWidget(
+                                  builder: (context) => Text(
+                                    currentUserDisplayName,
+                                    style: FlutterFlowTheme.of(context)
+                                        .displaySmall
+                                        .override(
+                                          fontFamily: 'Outfit',
+                                          letterSpacing: 0.0,
+                                        ),
+                                  ),
                                 ),
                               ),
                             ],
@@ -193,18 +196,21 @@ class _EpsWidgetState extends State<EpsWidget> with TickerProviderStateMixin {
                                 child: Padding(
                                   padding: const EdgeInsetsDirectional.fromSTEB(
                                       0.0, 4.0, 32.0, 0.0),
-                                  child: Text(
-                                    '',
-                                    textAlign: TextAlign.start,
-                                    style: FlutterFlowTheme.of(context)
-                                        .labelMedium
-                                        .override(
-                                          fontFamily: 'Readex Pro',
-                                          color: FlutterFlowTheme.of(context)
-                                              .primaryText,
-                                          fontSize: 20.0,
-                                          letterSpacing: 0.0,
-                                        ),
+                                  child: AuthUserStreamWidget(
+                                    builder: (context) => Text(
+                                      valueOrDefault(
+                                          currentUserDocument?.nombreeps, ''),
+                                      textAlign: TextAlign.start,
+                                      style: FlutterFlowTheme.of(context)
+                                          .labelMedium
+                                          .override(
+                                            fontFamily: 'Readex Pro',
+                                            color: FlutterFlowTheme.of(context)
+                                                .primaryText,
+                                            fontSize: 20.0,
+                                            letterSpacing: 0.0,
+                                          ),
+                                    ),
                                   ),
                                 ),
                               ),
@@ -213,18 +219,21 @@ class _EpsWidgetState extends State<EpsWidget> with TickerProviderStateMixin {
                           Padding(
                             padding: const EdgeInsetsDirectional.fromSTEB(
                                 32.0, 12.0, 32.0, 12.0),
-                            child: Text(
-                              'Este usuario se encuentra afiliado desde el 24 de julio de 2023 hasta el 24 de julio de 2999',
-                              textAlign: TextAlign.start,
-                              style: FlutterFlowTheme.of(context)
-                                  .labelMedium
-                                  .override(
-                                    fontFamily: 'Readex Pro',
-                                    fontSize: 12.0,
-                                    letterSpacing: 0.0,
-                                  ),
-                            ).animateOnPageLoad(
-                                animationsMap['textOnPageLoadAnimation']!),
+                            child: AuthUserStreamWidget(
+                              builder: (context) => Text(
+                                valueOrDefault(
+                                    currentUserDocument?.textoeps, ''),
+                                textAlign: TextAlign.start,
+                                style: FlutterFlowTheme.of(context)
+                                    .labelMedium
+                                    .override(
+                                      fontFamily: 'Readex Pro',
+                                      fontSize: 12.0,
+                                      letterSpacing: 0.0,
+                                    ),
+                              ).animateOnPageLoad(
+                                  animationsMap['textOnPageLoadAnimation']!),
+                            ),
                           ),
                           Padding(
                             padding: const EdgeInsetsDirectional.fromSTEB(
@@ -285,16 +294,21 @@ class _EpsWidgetState extends State<EpsWidget> with TickerProviderStateMixin {
                                             child: Padding(
                                               padding: const EdgeInsetsDirectional
                                                   .fromSTEB(2.0, 0.0, 0.0, 0.0),
-                                              child: Text(
-                                                '',
-                                                style:
-                                                    FlutterFlowTheme.of(context)
-                                                        .bodyLarge
-                                                        .override(
-                                                          fontFamily:
-                                                              'Readex Pro',
-                                                          letterSpacing: 0.0,
-                                                        ),
+                                              child: AuthUserStreamWidget(
+                                                builder: (context) => Text(
+                                                  valueOrDefault(
+                                                      currentUserDocument
+                                                          ?.estadoeps,
+                                                      ''),
+                                                  style: FlutterFlowTheme.of(
+                                                          context)
+                                                      .bodyLarge
+                                                      .override(
+                                                        fontFamily:
+                                                            'Readex Pro',
+                                                        letterSpacing: 0.0,
+                                                      ),
+                                                ),
                                               ),
                                             ),
                                           ),
@@ -357,16 +371,24 @@ class _EpsWidgetState extends State<EpsWidget> with TickerProviderStateMixin {
                                                         const EdgeInsetsDirectional
                                                             .fromSTEB(0.0, 4.0,
                                                                 0.0, 0.0),
-                                                    child: Text(
-                                                      '',
-                                                      style: FlutterFlowTheme
-                                                              .of(context)
-                                                          .labelMedium
-                                                          .override(
-                                                            fontFamily:
-                                                                'Readex Pro',
-                                                            letterSpacing: 0.0,
-                                                          ),
+                                                    child: AuthUserStreamWidget(
+                                                      builder: (context) =>
+                                                          Text(
+                                                        valueOrDefault(
+                                                            currentUserDocument
+                                                                ?.citaspendientes,
+                                                            ''),
+                                                        style:
+                                                            FlutterFlowTheme.of(
+                                                                    context)
+                                                                .labelMedium
+                                                                .override(
+                                                                  fontFamily:
+                                                                      'Readex Pro',
+                                                                  letterSpacing:
+                                                                      0.0,
+                                                                ),
+                                                      ),
                                                     ),
                                                   ),
                                                 ],
@@ -432,16 +454,24 @@ class _EpsWidgetState extends State<EpsWidget> with TickerProviderStateMixin {
                                                         const EdgeInsetsDirectional
                                                             .fromSTEB(0.0, 4.0,
                                                                 0.0, 0.0),
-                                                    child: Text(
-                                                      '',
-                                                      style: FlutterFlowTheme
-                                                              .of(context)
-                                                          .labelMedium
-                                                          .override(
-                                                            fontFamily:
-                                                                'Readex Pro',
-                                                            letterSpacing: 0.0,
-                                                          ),
+                                                    child: AuthUserStreamWidget(
+                                                      builder: (context) =>
+                                                          Text(
+                                                        valueOrDefault(
+                                                            currentUserDocument
+                                                                ?.diaspagos,
+                                                            ''),
+                                                        style:
+                                                            FlutterFlowTheme.of(
+                                                                    context)
+                                                                .labelMedium
+                                                                .override(
+                                                                  fontFamily:
+                                                                      'Readex Pro',
+                                                                  letterSpacing:
+                                                                      0.0,
+                                                                ),
+                                                      ),
                                                     ),
                                                   ),
                                                 ],
@@ -563,6 +593,7 @@ class _EpsWidgetState extends State<EpsWidget> with TickerProviderStateMixin {
                       textStyle:
                           FlutterFlowTheme.of(context).titleMedium.override(
                                 fontFamily: 'Readex Pro',
+                                fontSize: 16.0,
                                 letterSpacing: 0.0,
                               ),
                       borderSide: BorderSide(

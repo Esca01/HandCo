@@ -293,7 +293,7 @@ class _DashboardWidgetState extends State<DashboardWidget> {
                         hoverColor: Colors.transparent,
                         highlightColor: Colors.transparent,
                         onTap: () async {
-                          context.pushNamed('enConstruccion');
+                          context.pushNamed('Arl');
                         },
                         child: Row(
                           mainAxisSize: MainAxisSize.max,
@@ -307,7 +307,7 @@ class _DashboardWidgetState extends State<DashboardWidget> {
                               padding: const EdgeInsetsDirectional.fromSTEB(
                                   12.0, 0.0, 0.0, 0.0),
                               child: Text(
-                                'ARP',
+                                'ARL',
                                 style: FlutterFlowTheme.of(context)
                                     .labelMedium
                                     .override(
@@ -637,45 +637,63 @@ class _DashboardWidgetState extends State<DashboardWidget> {
                   onDownSwipe: (index) {},
                   itemBuilder: (context, index) {
                     return [
-                      () => ClipRRect(
-                            borderRadius: BorderRadius.circular(8.0),
-                            child: Image.network(
-                              'https://picsum.photos/seed/976/600',
-                              width: double.infinity,
-                              height: double.infinity,
-                              fit: BoxFit.cover,
+                      () => InkWell(
+                            splashColor: Colors.transparent,
+                            focusColor: Colors.transparent,
+                            hoverColor: Colors.transparent,
+                            highlightColor: Colors.transparent,
+                            onDoubleTap: () async {
+                              context.pushNamed('Eps');
+                            },
+                            child: ClipRRect(
+                              borderRadius: BorderRadius.circular(8.0),
+                              child: Image.network(
+                                'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSh05tI1-86HX29l18HOO1Ea5Rm-Oa0Go-EYA&s',
+                                width: double.infinity,
+                                height: double.infinity,
+                                fit: BoxFit.fill,
+                              ),
                             ),
                           ),
-                      () => ClipRRect(
-                            borderRadius: BorderRadius.circular(8.0),
-                            child: Image.network(
-                              'https://picsum.photos/seed/494/600',
-                              width: double.infinity,
-                              height: double.infinity,
-                              fit: BoxFit.cover,
+                      () => InkWell(
+                            splashColor: Colors.transparent,
+                            focusColor: Colors.transparent,
+                            hoverColor: Colors.transparent,
+                            highlightColor: Colors.transparent,
+                            onDoubleTap: () async {
+                              context.pushNamed('Pension');
+                            },
+                            child: ClipRRect(
+                              borderRadius: BorderRadius.circular(8.0),
+                              child: Image.network(
+                                'https://static.vecteezy.com/system/resources/previews/033/904/075/non_2x/retirement-fee-filled-color-icon-icon-for-your-website-mobile-presentation-and-logo-design-vector.jpg',
+                                width: double.infinity,
+                                height: double.infinity,
+                                fit: BoxFit.cover,
+                              ),
                             ),
                           ),
-                      () => ClipRRect(
-                            borderRadius: BorderRadius.circular(8.0),
-                            child: Image.network(
-                              'https://picsum.photos/seed/713/600',
-                              width: double.infinity,
-                              height: double.infinity,
-                              fit: BoxFit.cover,
-                            ),
-                          ),
-                      () => ClipRRect(
-                            borderRadius: BorderRadius.circular(8.0),
-                            child: Image.network(
-                              'https://picsum.photos/seed/304/600',
-                              width: double.infinity,
-                              height: double.infinity,
-                              fit: BoxFit.cover,
+                      () => InkWell(
+                            splashColor: Colors.transparent,
+                            focusColor: Colors.transparent,
+                            hoverColor: Colors.transparent,
+                            highlightColor: Colors.transparent,
+                            onDoubleTap: () async {
+                              context.pushNamed('Arl');
+                            },
+                            child: ClipRRect(
+                              borderRadius: BorderRadius.circular(8.0),
+                              child: Image.network(
+                                'https://thumbs.dreamstime.com/b/arl-logo-letter-monogram-design-exclusive-features-elements-simple-modern-minimal-style-crafted-to-work-324060781.jpg',
+                                width: double.infinity,
+                                height: double.infinity,
+                                fit: BoxFit.fill,
+                              ),
                             ),
                           ),
                     ][index]();
                   },
-                  itemCount: 4,
+                  itemCount: 3,
                   controller: _model.swipeableStackController,
                   loop: true,
                   cardDisplayCount: 2,

@@ -11,21 +11,23 @@ class EditarperfilModel extends FlutterFlowModel<EditarperfilWidget> {
   String uploadedFileUrl = '';
 
   // State field(s) for nombre widget.
+  final nombreKey = GlobalKey();
   FocusNode? nombreFocusNode;
   TextEditingController? nombreTextController;
+  String? nombreSelectedOption;
   String? Function(BuildContext, String?)? nombreTextControllerValidator;
   // State field(s) for telefono widget.
+  final telefonoKey = GlobalKey();
   FocusNode? telefonoFocusNode;
   TextEditingController? telefonoTextController;
+  String? telefonoSelectedOption;
   String? Function(BuildContext, String?)? telefonoTextControllerValidator;
   // State field(s) for edad widget.
+  final edadKey = GlobalKey();
   FocusNode? edadFocusNode;
   TextEditingController? edadTextController;
+  String? edadSelectedOption;
   String? Function(BuildContext, String?)? edadTextControllerValidator;
-  // State field(s) for fechadeexpe widget.
-  FocusNode? fechadeexpeFocusNode;
-  TextEditingController? fechadeexpeTextController;
-  String? Function(BuildContext, String?)? fechadeexpeTextControllerValidator;
 
   @override
   void initState(BuildContext context) {}
@@ -33,15 +35,9 @@ class EditarperfilModel extends FlutterFlowModel<EditarperfilWidget> {
   @override
   void dispose() {
     nombreFocusNode?.dispose();
-    nombreTextController?.dispose();
 
     telefonoFocusNode?.dispose();
-    telefonoTextController?.dispose();
 
     edadFocusNode?.dispose();
-    edadTextController?.dispose();
-
-    fechadeexpeFocusNode?.dispose();
-    fechadeexpeTextController?.dispose();
   }
 }

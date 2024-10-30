@@ -132,7 +132,7 @@ class _CrearcuentaWidgetState extends State<CrearcuentaWidget> {
                             decoration: InputDecoration(
                               labelText: 'Nombre Completo',
                               labelStyle: FlutterFlowTheme.of(context)
-                                  .labelMedium
+                                  .labelLarge
                                   .override(
                                     fontFamily: 'Readex Pro',
                                     letterSpacing: 0.0,
@@ -246,7 +246,7 @@ class _CrearcuentaWidgetState extends State<CrearcuentaWidget> {
                                       fontFamily: 'Readex Pro',
                                       letterSpacing: 0.0,
                                     ),
-                            keyboardType: TextInputType.number,
+                            keyboardType: TextInputType.emailAddress,
                             validator: _model.emailTextControllerValidator
                                 .asValidator(context),
                           ),
@@ -313,7 +313,7 @@ class _CrearcuentaWidgetState extends State<CrearcuentaWidget> {
                                       fontFamily: 'Readex Pro',
                                       letterSpacing: 0.0,
                                     ),
-                            keyboardType: TextInputType.datetime,
+                            keyboardType: TextInputType.number,
                             validator: _model.cedulaTextControllerValidator
                                 .asValidator(context),
                           ),
@@ -530,6 +530,7 @@ class _CrearcuentaWidgetState extends State<CrearcuentaWidget> {
                                       fontFamily: 'Readex Pro',
                                       letterSpacing: 0.0,
                                     ),
+                            keyboardType: TextInputType.visiblePassword,
                             validator: _model.contraTextControllerValidator
                                 .asValidator(context),
                           ),
@@ -611,6 +612,7 @@ class _CrearcuentaWidgetState extends State<CrearcuentaWidget> {
                                       fontFamily: 'Readex Pro',
                                       letterSpacing: 0.0,
                                     ),
+                            keyboardType: TextInputType.visiblePassword,
                             validator: _model
                                 .confircontraTextControllerValidator
                                 .asValidator(context),

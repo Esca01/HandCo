@@ -1,3 +1,5 @@
+import '/auth/firebase_auth/auth_util.dart';
+import '/backend/backend.dart';
 import '/flutter_flow/flutter_flow_icon_button.dart';
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
@@ -23,32 +25,44 @@ class _DatosWidgetState extends State<DatosWidget> {
     super.initState();
     _model = createModel(context, () => DatosModel());
 
-    _model.nombreTextController ??= TextEditingController();
-    _model.nombreFocusNode ??= FocusNode();
+    _model.estadopensionTextController ??= TextEditingController();
+    _model.estadopensionFocusNode ??= FocusNode();
 
-    _model.emailTextController ??= TextEditingController();
-    _model.emailFocusNode ??= FocusNode();
+    _model.saldopensionTextController ??= TextEditingController();
+    _model.saldopensionFocusNode ??= FocusNode();
 
-    _model.cedulaTextController ??= TextEditingController();
-    _model.cedulaFocusNode ??= FocusNode();
+    _model.agendapensionTextController ??= TextEditingController();
+    _model.agendapensionFocusNode ??= FocusNode();
 
-    _model.fechaExpedicionTextController ??= TextEditingController();
-    _model.fechaExpedicionFocusNode ??= FocusNode();
+    _model.fechajubilaTextController ??= TextEditingController();
+    _model.fechajubilaFocusNode ??= FocusNode();
 
-    _model.telefonoTextController1 ??= TextEditingController();
-    _model.telefonoFocusNode1 ??= FocusNode();
+    _model.estadoepsTextController ??= TextEditingController();
+    _model.estadoepsFocusNode ??= FocusNode();
 
-    _model.telefonoTextController2 ??= TextEditingController();
-    _model.telefonoFocusNode2 ??= FocusNode();
+    _model.citaspendientesTextController ??= TextEditingController();
+    _model.citaspendientesFocusNode ??= FocusNode();
 
-    _model.telefonoTextController3 ??= TextEditingController();
-    _model.telefonoFocusNode3 ??= FocusNode();
+    _model.aldiapagosTextController ??= TextEditingController();
+    _model.aldiapagosFocusNode ??= FocusNode();
 
-    _model.telefonoTextController4 ??= TextEditingController();
-    _model.telefonoFocusNode4 ??= FocusNode();
+    _model.estadoarlTextController ??= TextEditingController();
+    _model.estadoarlFocusNode ??= FocusNode();
 
-    _model.telefonoTextController5 ??= TextEditingController();
-    _model.telefonoFocusNode5 ??= FocusNode();
+    _model.incapacidadesvigentesTextController1 ??= TextEditingController();
+    _model.incapacidadesvigentesFocusNode1 ??= FocusNode();
+
+    _model.incapacidadesvigentesTextController2 ??= TextEditingController();
+    _model.incapacidadesvigentesFocusNode2 ??= FocusNode();
+
+    _model.incapacidadesvigentesTextController3 ??= TextEditingController();
+    _model.incapacidadesvigentesFocusNode3 ??= FocusNode();
+
+    _model.incapacidadesvigentesTextController4 ??= TextEditingController();
+    _model.incapacidadesvigentesFocusNode4 ??= FocusNode();
+
+    _model.incapacidadesvigentesTextController5 ??= TextEditingController();
+    _model.incapacidadesvigentesFocusNode5 ??= FocusNode();
 
     WidgetsBinding.instance.addPostFrameCallback((_) => safeSetState(() {}));
   }
@@ -69,36 +83,38 @@ class _DatosWidgetState extends State<DatosWidget> {
         backgroundColor: FlutterFlowTheme.of(context).primaryBackground,
         body: SafeArea(
           top: true,
-          child: Column(
-            mainAxisSize: MainAxisSize.max,
-            children: [
-              Align(
-                alignment: const AlignmentDirectional(1.0, -1.0),
-                child: Padding(
-                  padding: const EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 12.0, 0.0),
-                  child: FlutterFlowIconButton(
-                    borderColor: FlutterFlowTheme.of(context).secondaryText,
-                    borderRadius: 12.0,
-                    borderWidth: 1.0,
-                    buttonSize: 40.0,
-                    fillColor: FlutterFlowTheme.of(context).secondaryBackground,
-                    icon: Icon(
-                      Icons.close_rounded,
-                      color: FlutterFlowTheme.of(context).primaryText,
-                      size: 24.0,
+          child: SingleChildScrollView(
+            child: Column(
+              mainAxisSize: MainAxisSize.max,
+              children: [
+                Align(
+                  alignment: const AlignmentDirectional(1.0, -1.0),
+                  child: Padding(
+                    padding:
+                        const EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 12.0, 0.0),
+                    child: FlutterFlowIconButton(
+                      borderColor: FlutterFlowTheme.of(context).secondaryText,
+                      borderRadius: 12.0,
+                      borderWidth: 1.0,
+                      buttonSize: 40.0,
+                      fillColor:
+                          FlutterFlowTheme.of(context).secondaryBackground,
+                      icon: Icon(
+                        Icons.close_rounded,
+                        color: FlutterFlowTheme.of(context).primaryText,
+                        size: 24.0,
+                      ),
+                      onPressed: () async {
+                        context.pushNamed('Dashboard');
+                      },
                     ),
-                    onPressed: () async {
-                      context.pushNamed('Dashboard');
-                    },
                   ),
                 ),
-              ),
-              Align(
-                alignment: const AlignmentDirectional(0.0, 0.0),
-                child: Padding(
-                  padding:
-                      const EdgeInsetsDirectional.fromSTEB(32.0, 0.0, 32.0, 32.0),
-                  child: SingleChildScrollView(
+                Align(
+                  alignment: const AlignmentDirectional(0.0, 0.0),
+                  child: Padding(
+                    padding:
+                        const EdgeInsetsDirectional.fromSTEB(32.0, 0.0, 32.0, 32.0),
                     child: Column(
                       mainAxisSize: MainAxisSize.max,
                       mainAxisAlignment: MainAxisAlignment.center,
@@ -119,8 +135,8 @@ class _DatosWidgetState extends State<DatosWidget> {
                           child: SizedBox(
                             width: 370.0,
                             child: TextFormField(
-                              controller: _model.nombreTextController,
-                              focusNode: _model.nombreFocusNode,
+                              controller: _model.estadopensionTextController,
+                              focusNode: _model.estadopensionFocusNode,
                               autofocus: true,
                               obscureText: false,
                               decoration: InputDecoration(
@@ -175,7 +191,8 @@ class _DatosWidgetState extends State<DatosWidget> {
                                     fontFamily: 'Readex Pro',
                                     letterSpacing: 0.0,
                                   ),
-                              validator: _model.nombreTextControllerValidator
+                              validator: _model
+                                  .estadopensionTextControllerValidator
                                   .asValidator(context),
                             ),
                           ),
@@ -186,8 +203,8 @@ class _DatosWidgetState extends State<DatosWidget> {
                           child: SizedBox(
                             width: 370.0,
                             child: TextFormField(
-                              controller: _model.emailTextController,
-                              focusNode: _model.emailFocusNode,
+                              controller: _model.saldopensionTextController,
+                              focusNode: _model.saldopensionFocusNode,
                               autofocus: true,
                               obscureText: false,
                               decoration: InputDecoration(
@@ -243,7 +260,8 @@ class _DatosWidgetState extends State<DatosWidget> {
                                     letterSpacing: 0.0,
                                   ),
                               keyboardType: TextInputType.number,
-                              validator: _model.emailTextControllerValidator
+                              validator: _model
+                                  .saldopensionTextControllerValidator
                                   .asValidator(context),
                             ),
                           ),
@@ -254,8 +272,8 @@ class _DatosWidgetState extends State<DatosWidget> {
                           child: SizedBox(
                             width: 370.0,
                             child: TextFormField(
-                              controller: _model.cedulaTextController,
-                              focusNode: _model.cedulaFocusNode,
+                              controller: _model.agendapensionTextController,
+                              focusNode: _model.agendapensionFocusNode,
                               autofocus: true,
                               obscureText: false,
                               decoration: InputDecoration(
@@ -311,7 +329,8 @@ class _DatosWidgetState extends State<DatosWidget> {
                                     letterSpacing: 0.0,
                                   ),
                               keyboardType: TextInputType.datetime,
-                              validator: _model.cedulaTextControllerValidator
+                              validator: _model
+                                  .agendapensionTextControllerValidator
                                   .asValidator(context),
                             ),
                           ),
@@ -322,8 +341,8 @@ class _DatosWidgetState extends State<DatosWidget> {
                           child: SizedBox(
                             width: 370.0,
                             child: TextFormField(
-                              controller: _model.fechaExpedicionTextController,
-                              focusNode: _model.fechaExpedicionFocusNode,
+                              controller: _model.fechajubilaTextController,
+                              focusNode: _model.fechajubilaFocusNode,
                               autofocus: true,
                               obscureText: false,
                               decoration: InputDecoration(
@@ -380,7 +399,7 @@ class _DatosWidgetState extends State<DatosWidget> {
                                   ),
                               keyboardType: TextInputType.datetime,
                               validator: _model
-                                  .fechaExpedicionTextControllerValidator
+                                  .fechajubilaTextControllerValidator
                                   .asValidator(context),
                             ),
                           ),
@@ -391,8 +410,8 @@ class _DatosWidgetState extends State<DatosWidget> {
                           child: SizedBox(
                             width: 370.0,
                             child: TextFormField(
-                              controller: _model.telefonoTextController1,
-                              focusNode: _model.telefonoFocusNode1,
+                              controller: _model.estadoepsTextController,
+                              focusNode: _model.estadoepsFocusNode,
                               autofocus: true,
                               obscureText: false,
                               decoration: InputDecoration(
@@ -448,7 +467,7 @@ class _DatosWidgetState extends State<DatosWidget> {
                                     letterSpacing: 0.0,
                                   ),
                               keyboardType: TextInputType.phone,
-                              validator: _model.telefonoTextController1Validator
+                              validator: _model.estadoepsTextControllerValidator
                                   .asValidator(context),
                             ),
                           ),
@@ -459,8 +478,8 @@ class _DatosWidgetState extends State<DatosWidget> {
                           child: SizedBox(
                             width: 370.0,
                             child: TextFormField(
-                              controller: _model.telefonoTextController2,
-                              focusNode: _model.telefonoFocusNode2,
+                              controller: _model.citaspendientesTextController,
+                              focusNode: _model.citaspendientesFocusNode,
                               autofocus: true,
                               obscureText: false,
                               decoration: InputDecoration(
@@ -516,7 +535,8 @@ class _DatosWidgetState extends State<DatosWidget> {
                                     letterSpacing: 0.0,
                                   ),
                               keyboardType: TextInputType.phone,
-                              validator: _model.telefonoTextController2Validator
+                              validator: _model
+                                  .citaspendientesTextControllerValidator
                                   .asValidator(context),
                             ),
                           ),
@@ -527,8 +547,8 @@ class _DatosWidgetState extends State<DatosWidget> {
                           child: SizedBox(
                             width: 370.0,
                             child: TextFormField(
-                              controller: _model.telefonoTextController3,
-                              focusNode: _model.telefonoFocusNode3,
+                              controller: _model.aldiapagosTextController,
+                              focusNode: _model.aldiapagosFocusNode,
                               autofocus: true,
                               obscureText: false,
                               decoration: InputDecoration(
@@ -584,7 +604,8 @@ class _DatosWidgetState extends State<DatosWidget> {
                                     letterSpacing: 0.0,
                                   ),
                               keyboardType: TextInputType.phone,
-                              validator: _model.telefonoTextController3Validator
+                              validator: _model
+                                  .aldiapagosTextControllerValidator
                                   .asValidator(context),
                             ),
                           ),
@@ -595,8 +616,8 @@ class _DatosWidgetState extends State<DatosWidget> {
                           child: SizedBox(
                             width: 370.0,
                             child: TextFormField(
-                              controller: _model.telefonoTextController4,
-                              focusNode: _model.telefonoFocusNode4,
+                              controller: _model.estadoarlTextController,
+                              focusNode: _model.estadoarlFocusNode,
                               autofocus: true,
                               obscureText: false,
                               decoration: InputDecoration(
@@ -652,7 +673,7 @@ class _DatosWidgetState extends State<DatosWidget> {
                                     letterSpacing: 0.0,
                                   ),
                               keyboardType: TextInputType.phone,
-                              validator: _model.telefonoTextController4Validator
+                              validator: _model.estadoarlTextControllerValidator
                                   .asValidator(context),
                             ),
                           ),
@@ -663,12 +684,13 @@ class _DatosWidgetState extends State<DatosWidget> {
                           child: SizedBox(
                             width: 370.0,
                             child: TextFormField(
-                              controller: _model.telefonoTextController5,
-                              focusNode: _model.telefonoFocusNode5,
+                              controller:
+                                  _model.incapacidadesvigentesTextController1,
+                              focusNode: _model.incapacidadesvigentesFocusNode1,
                               autofocus: true,
                               obscureText: false,
                               decoration: InputDecoration(
-                                labelText: 'Incapacidad vigente',
+                                labelText: 'Nombre EPS',
                                 labelStyle: FlutterFlowTheme.of(context)
                                     .labelLarge
                                     .override(
@@ -720,7 +742,288 @@ class _DatosWidgetState extends State<DatosWidget> {
                                     letterSpacing: 0.0,
                                   ),
                               keyboardType: TextInputType.phone,
-                              validator: _model.telefonoTextController5Validator
+                              validator: _model
+                                  .incapacidadesvigentesTextController1Validator
+                                  .asValidator(context),
+                            ),
+                          ),
+                        ),
+                        Padding(
+                          padding: const EdgeInsetsDirectional.fromSTEB(
+                              0.0, 0.0, 0.0, 16.0),
+                          child: SizedBox(
+                            width: 370.0,
+                            child: TextFormField(
+                              controller:
+                                  _model.incapacidadesvigentesTextController2,
+                              focusNode: _model.incapacidadesvigentesFocusNode2,
+                              autofocus: true,
+                              obscureText: false,
+                              decoration: InputDecoration(
+                                labelText: 'Nombre Pension',
+                                labelStyle: FlutterFlowTheme.of(context)
+                                    .labelLarge
+                                    .override(
+                                      fontFamily: 'Readex Pro',
+                                      letterSpacing: 0.0,
+                                    ),
+                                hintStyle: FlutterFlowTheme.of(context)
+                                    .bodyLarge
+                                    .override(
+                                      fontFamily: 'Readex Pro',
+                                      letterSpacing: 0.0,
+                                    ),
+                                enabledBorder: OutlineInputBorder(
+                                  borderSide: const BorderSide(
+                                    color: Color(0xFF4B39EF),
+                                    width: 2.0,
+                                  ),
+                                  borderRadius: BorderRadius.circular(12.0),
+                                ),
+                                focusedBorder: OutlineInputBorder(
+                                  borderSide: const BorderSide(
+                                    color: Color(0x00000000),
+                                    width: 2.0,
+                                  ),
+                                  borderRadius: BorderRadius.circular(12.0),
+                                ),
+                                errorBorder: OutlineInputBorder(
+                                  borderSide: const BorderSide(
+                                    color: Color(0x00000000),
+                                    width: 2.0,
+                                  ),
+                                  borderRadius: BorderRadius.circular(12.0),
+                                ),
+                                focusedErrorBorder: OutlineInputBorder(
+                                  borderSide: const BorderSide(
+                                    color: Color(0x00000000),
+                                    width: 2.0,
+                                  ),
+                                  borderRadius: BorderRadius.circular(12.0),
+                                ),
+                                filled: true,
+                                fillColor: FlutterFlowTheme.of(context)
+                                    .primaryBackground,
+                              ),
+                              style: FlutterFlowTheme.of(context)
+                                  .bodyLarge
+                                  .override(
+                                    fontFamily: 'Readex Pro',
+                                    letterSpacing: 0.0,
+                                  ),
+                              keyboardType: TextInputType.phone,
+                              validator: _model
+                                  .incapacidadesvigentesTextController2Validator
+                                  .asValidator(context),
+                            ),
+                          ),
+                        ),
+                        Padding(
+                          padding: const EdgeInsetsDirectional.fromSTEB(
+                              0.0, 0.0, 0.0, 16.0),
+                          child: SizedBox(
+                            width: 370.0,
+                            child: TextFormField(
+                              controller:
+                                  _model.incapacidadesvigentesTextController3,
+                              focusNode: _model.incapacidadesvigentesFocusNode3,
+                              autofocus: true,
+                              obscureText: false,
+                              decoration: InputDecoration(
+                                labelText: 'Nombre ARL',
+                                labelStyle: FlutterFlowTheme.of(context)
+                                    .labelLarge
+                                    .override(
+                                      fontFamily: 'Readex Pro',
+                                      letterSpacing: 0.0,
+                                    ),
+                                hintStyle: FlutterFlowTheme.of(context)
+                                    .bodyLarge
+                                    .override(
+                                      fontFamily: 'Readex Pro',
+                                      letterSpacing: 0.0,
+                                    ),
+                                enabledBorder: OutlineInputBorder(
+                                  borderSide: const BorderSide(
+                                    color: Color(0xFF4B39EF),
+                                    width: 2.0,
+                                  ),
+                                  borderRadius: BorderRadius.circular(12.0),
+                                ),
+                                focusedBorder: OutlineInputBorder(
+                                  borderSide: const BorderSide(
+                                    color: Color(0x00000000),
+                                    width: 2.0,
+                                  ),
+                                  borderRadius: BorderRadius.circular(12.0),
+                                ),
+                                errorBorder: OutlineInputBorder(
+                                  borderSide: const BorderSide(
+                                    color: Color(0x00000000),
+                                    width: 2.0,
+                                  ),
+                                  borderRadius: BorderRadius.circular(12.0),
+                                ),
+                                focusedErrorBorder: OutlineInputBorder(
+                                  borderSide: const BorderSide(
+                                    color: Color(0x00000000),
+                                    width: 2.0,
+                                  ),
+                                  borderRadius: BorderRadius.circular(12.0),
+                                ),
+                                filled: true,
+                                fillColor: FlutterFlowTheme.of(context)
+                                    .primaryBackground,
+                              ),
+                              style: FlutterFlowTheme.of(context)
+                                  .bodyLarge
+                                  .override(
+                                    fontFamily: 'Readex Pro',
+                                    letterSpacing: 0.0,
+                                  ),
+                              keyboardType: TextInputType.phone,
+                              validator: _model
+                                  .incapacidadesvigentesTextController3Validator
+                                  .asValidator(context),
+                            ),
+                          ),
+                        ),
+                        Padding(
+                          padding: const EdgeInsetsDirectional.fromSTEB(
+                              0.0, 0.0, 0.0, 16.0),
+                          child: SizedBox(
+                            width: 370.0,
+                            child: TextFormField(
+                              controller:
+                                  _model.incapacidadesvigentesTextController4,
+                              focusNode: _model.incapacidadesvigentesFocusNode4,
+                              autofocus: true,
+                              obscureText: false,
+                              decoration: InputDecoration(
+                                labelText: 'Afiliacion EPS',
+                                labelStyle: FlutterFlowTheme.of(context)
+                                    .labelLarge
+                                    .override(
+                                      fontFamily: 'Readex Pro',
+                                      letterSpacing: 0.0,
+                                    ),
+                                hintStyle: FlutterFlowTheme.of(context)
+                                    .bodyLarge
+                                    .override(
+                                      fontFamily: 'Readex Pro',
+                                      letterSpacing: 0.0,
+                                    ),
+                                enabledBorder: OutlineInputBorder(
+                                  borderSide: const BorderSide(
+                                    color: Color(0xFF4B39EF),
+                                    width: 2.0,
+                                  ),
+                                  borderRadius: BorderRadius.circular(12.0),
+                                ),
+                                focusedBorder: OutlineInputBorder(
+                                  borderSide: const BorderSide(
+                                    color: Color(0x00000000),
+                                    width: 2.0,
+                                  ),
+                                  borderRadius: BorderRadius.circular(12.0),
+                                ),
+                                errorBorder: OutlineInputBorder(
+                                  borderSide: const BorderSide(
+                                    color: Color(0x00000000),
+                                    width: 2.0,
+                                  ),
+                                  borderRadius: BorderRadius.circular(12.0),
+                                ),
+                                focusedErrorBorder: OutlineInputBorder(
+                                  borderSide: const BorderSide(
+                                    color: Color(0x00000000),
+                                    width: 2.0,
+                                  ),
+                                  borderRadius: BorderRadius.circular(12.0),
+                                ),
+                                filled: true,
+                                fillColor: FlutterFlowTheme.of(context)
+                                    .primaryBackground,
+                              ),
+                              style: FlutterFlowTheme.of(context)
+                                  .bodyLarge
+                                  .override(
+                                    fontFamily: 'Readex Pro',
+                                    letterSpacing: 0.0,
+                                  ),
+                              keyboardType: TextInputType.phone,
+                              validator: _model
+                                  .incapacidadesvigentesTextController4Validator
+                                  .asValidator(context),
+                            ),
+                          ),
+                        ),
+                        Padding(
+                          padding: const EdgeInsetsDirectional.fromSTEB(
+                              0.0, 0.0, 0.0, 16.0),
+                          child: SizedBox(
+                            width: 370.0,
+                            child: TextFormField(
+                              controller:
+                                  _model.incapacidadesvigentesTextController5,
+                              focusNode: _model.incapacidadesvigentesFocusNode5,
+                              autofocus: true,
+                              obscureText: false,
+                              decoration: InputDecoration(
+                                labelText: 'Incapacidad vigente ARL',
+                                labelStyle: FlutterFlowTheme.of(context)
+                                    .labelLarge
+                                    .override(
+                                      fontFamily: 'Readex Pro',
+                                      letterSpacing: 0.0,
+                                    ),
+                                hintStyle: FlutterFlowTheme.of(context)
+                                    .bodyLarge
+                                    .override(
+                                      fontFamily: 'Readex Pro',
+                                      letterSpacing: 0.0,
+                                    ),
+                                enabledBorder: OutlineInputBorder(
+                                  borderSide: const BorderSide(
+                                    color: Color(0xFF4B39EF),
+                                    width: 2.0,
+                                  ),
+                                  borderRadius: BorderRadius.circular(12.0),
+                                ),
+                                focusedBorder: OutlineInputBorder(
+                                  borderSide: const BorderSide(
+                                    color: Color(0x00000000),
+                                    width: 2.0,
+                                  ),
+                                  borderRadius: BorderRadius.circular(12.0),
+                                ),
+                                errorBorder: OutlineInputBorder(
+                                  borderSide: const BorderSide(
+                                    color: Color(0x00000000),
+                                    width: 2.0,
+                                  ),
+                                  borderRadius: BorderRadius.circular(12.0),
+                                ),
+                                focusedErrorBorder: OutlineInputBorder(
+                                  borderSide: const BorderSide(
+                                    color: Color(0x00000000),
+                                    width: 2.0,
+                                  ),
+                                  borderRadius: BorderRadius.circular(12.0),
+                                ),
+                                filled: true,
+                                fillColor: FlutterFlowTheme.of(context)
+                                    .primaryBackground,
+                              ),
+                              style: FlutterFlowTheme.of(context)
+                                  .bodyLarge
+                                  .override(
+                                    fontFamily: 'Readex Pro',
+                                    letterSpacing: 0.0,
+                                  ),
+                              keyboardType: TextInputType.phone,
+                              validator: _model
+                                  .incapacidadesvigentesTextController5Validator
                                   .asValidator(context),
                             ),
                           ),
@@ -729,8 +1032,34 @@ class _DatosWidgetState extends State<DatosWidget> {
                           padding: const EdgeInsetsDirectional.fromSTEB(
                               0.0, 0.0, 0.0, 16.0),
                           child: FFButtonWidget(
-                            onPressed: () {
-                              print('Button pressed ...');
+                            onPressed: () async {
+                              await currentUserReference!
+                                  .update(createUsersRecordData(
+                                estadopension:
+                                    _model.estadopensionTextController.text,
+                                saldopension:
+                                    _model.saldopensionTextController.text,
+                                agendapersonal:
+                                    _model.agendapensionTextController.text,
+                                fechajubila:
+                                    _model.fechajubilaTextController.text,
+                                estadoeps: _model.estadoepsTextController.text,
+                                citaspendientes:
+                                    _model.citaspendientesTextController.text,
+                                diaspagos: _model.aldiapagosTextController.text,
+                                estadoarl: _model.estadoarlTextController.text,
+                                nombreeps: _model
+                                    .incapacidadesvigentesTextController1.text,
+                                nombrepension: _model
+                                    .incapacidadesvigentesTextController2.text,
+                                nombrearl: _model
+                                    .incapacidadesvigentesTextController3.text,
+                                incapacidad: _model
+                                    .incapacidadesvigentesTextController5.text,
+                                textoeps: _model
+                                    .incapacidadesvigentesTextController4.text,
+                              ));
+                              context.safePop();
                             },
                             text: 'Crear Cuenta',
                             options: FFButtonOptions(
@@ -757,8 +1086,8 @@ class _DatosWidgetState extends State<DatosWidget> {
                     ),
                   ),
                 ),
-              ),
-            ],
+              ],
+            ),
           ),
         ),
       ),

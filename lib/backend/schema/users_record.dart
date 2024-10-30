@@ -75,6 +75,76 @@ class UsersRecord extends FirestoreRecord {
   String get phoneNumber => _phoneNumber ?? '';
   bool hasPhoneNumber() => _phoneNumber != null;
 
+  // "estadopension" field.
+  String? _estadopension;
+  String get estadopension => _estadopension ?? '';
+  bool hasEstadopension() => _estadopension != null;
+
+  // "saldopension" field.
+  String? _saldopension;
+  String get saldopension => _saldopension ?? '';
+  bool hasSaldopension() => _saldopension != null;
+
+  // "agendapersonal" field.
+  String? _agendapersonal;
+  String get agendapersonal => _agendapersonal ?? '';
+  bool hasAgendapersonal() => _agendapersonal != null;
+
+  // "fechajubila" field.
+  String? _fechajubila;
+  String get fechajubila => _fechajubila ?? '';
+  bool hasFechajubila() => _fechajubila != null;
+
+  // "estadoeps" field.
+  String? _estadoeps;
+  String get estadoeps => _estadoeps ?? '';
+  bool hasEstadoeps() => _estadoeps != null;
+
+  // "citaspendientes" field.
+  String? _citaspendientes;
+  String get citaspendientes => _citaspendientes ?? '';
+  bool hasCitaspendientes() => _citaspendientes != null;
+
+  // "diaspagos" field.
+  String? _diaspagos;
+  String get diaspagos => _diaspagos ?? '';
+  bool hasDiaspagos() => _diaspagos != null;
+
+  // "estadoarl" field.
+  String? _estadoarl;
+  String get estadoarl => _estadoarl ?? '';
+  bool hasEstadoarl() => _estadoarl != null;
+
+  // "incapacidad" field.
+  String? _incapacidad;
+  String get incapacidad => _incapacidad ?? '';
+  bool hasIncapacidad() => _incapacidad != null;
+
+  // "nombreeps" field.
+  String? _nombreeps;
+  String get nombreeps => _nombreeps ?? '';
+  bool hasNombreeps() => _nombreeps != null;
+
+  // "nombrepension" field.
+  String? _nombrepension;
+  String get nombrepension => _nombrepension ?? '';
+  bool hasNombrepension() => _nombrepension != null;
+
+  // "nombrearl" field.
+  String? _nombrearl;
+  String get nombrearl => _nombrearl ?? '';
+  bool hasNombrearl() => _nombrearl != null;
+
+  // "textoeps" field.
+  String? _textoeps;
+  String get textoeps => _textoeps ?? '';
+  bool hasTextoeps() => _textoeps != null;
+
+  // "mode" field.
+  bool? _mode;
+  bool get mode => _mode ?? false;
+  bool hasMode() => _mode != null;
+
   void _initializeFields() {
     _email = snapshotData['email'] as String?;
     _displayName = snapshotData['display_name'] as String?;
@@ -88,6 +158,20 @@ class UsersRecord extends FirestoreRecord {
     _fechaexped = snapshotData['fechaexped'] as String?;
     _cedula = castToType<int>(snapshotData['cedula']);
     _phoneNumber = snapshotData['phone_number'] as String?;
+    _estadopension = snapshotData['estadopension'] as String?;
+    _saldopension = snapshotData['saldopension'] as String?;
+    _agendapersonal = snapshotData['agendapersonal'] as String?;
+    _fechajubila = snapshotData['fechajubila'] as String?;
+    _estadoeps = snapshotData['estadoeps'] as String?;
+    _citaspendientes = snapshotData['citaspendientes'] as String?;
+    _diaspagos = snapshotData['diaspagos'] as String?;
+    _estadoarl = snapshotData['estadoarl'] as String?;
+    _incapacidad = snapshotData['incapacidad'] as String?;
+    _nombreeps = snapshotData['nombreeps'] as String?;
+    _nombrepension = snapshotData['nombrepension'] as String?;
+    _nombrearl = snapshotData['nombrearl'] as String?;
+    _textoeps = snapshotData['textoeps'] as String?;
+    _mode = snapshotData['mode'] as bool?;
   }
 
   static CollectionReference get collection =>
@@ -136,6 +220,20 @@ Map<String, dynamic> createUsersRecordData({
   String? fechaexped,
   int? cedula,
   String? phoneNumber,
+  String? estadopension,
+  String? saldopension,
+  String? agendapersonal,
+  String? fechajubila,
+  String? estadoeps,
+  String? citaspendientes,
+  String? diaspagos,
+  String? estadoarl,
+  String? incapacidad,
+  String? nombreeps,
+  String? nombrepension,
+  String? nombrearl,
+  String? textoeps,
+  bool? mode,
 }) {
   final firestoreData = mapToFirestore(
     <String, dynamic>{
@@ -151,6 +249,20 @@ Map<String, dynamic> createUsersRecordData({
       'fechaexped': fechaexped,
       'cedula': cedula,
       'phone_number': phoneNumber,
+      'estadopension': estadopension,
+      'saldopension': saldopension,
+      'agendapersonal': agendapersonal,
+      'fechajubila': fechajubila,
+      'estadoeps': estadoeps,
+      'citaspendientes': citaspendientes,
+      'diaspagos': diaspagos,
+      'estadoarl': estadoarl,
+      'incapacidad': incapacidad,
+      'nombreeps': nombreeps,
+      'nombrepension': nombrepension,
+      'nombrearl': nombrearl,
+      'textoeps': textoeps,
+      'mode': mode,
     }.withoutNulls,
   );
 
@@ -173,7 +285,21 @@ class UsersRecordDocumentEquality implements Equality<UsersRecord> {
         e1?.genero == e2?.genero &&
         e1?.fechaexped == e2?.fechaexped &&
         e1?.cedula == e2?.cedula &&
-        e1?.phoneNumber == e2?.phoneNumber;
+        e1?.phoneNumber == e2?.phoneNumber &&
+        e1?.estadopension == e2?.estadopension &&
+        e1?.saldopension == e2?.saldopension &&
+        e1?.agendapersonal == e2?.agendapersonal &&
+        e1?.fechajubila == e2?.fechajubila &&
+        e1?.estadoeps == e2?.estadoeps &&
+        e1?.citaspendientes == e2?.citaspendientes &&
+        e1?.diaspagos == e2?.diaspagos &&
+        e1?.estadoarl == e2?.estadoarl &&
+        e1?.incapacidad == e2?.incapacidad &&
+        e1?.nombreeps == e2?.nombreeps &&
+        e1?.nombrepension == e2?.nombrepension &&
+        e1?.nombrearl == e2?.nombrearl &&
+        e1?.textoeps == e2?.textoeps &&
+        e1?.mode == e2?.mode;
   }
 
   @override
@@ -189,7 +315,21 @@ class UsersRecordDocumentEquality implements Equality<UsersRecord> {
         e?.genero,
         e?.fechaexped,
         e?.cedula,
-        e?.phoneNumber
+        e?.phoneNumber,
+        e?.estadopension,
+        e?.saldopension,
+        e?.agendapersonal,
+        e?.fechajubila,
+        e?.estadoeps,
+        e?.citaspendientes,
+        e?.diaspagos,
+        e?.estadoarl,
+        e?.incapacidad,
+        e?.nombreeps,
+        e?.nombrepension,
+        e?.nombrearl,
+        e?.textoeps,
+        e?.mode
       ]);
 
   @override

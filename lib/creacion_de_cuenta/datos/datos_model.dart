@@ -5,74 +5,107 @@ import 'package:flutter/material.dart';
 class DatosModel extends FlutterFlowModel<DatosWidget> {
   ///  State fields for stateful widgets in this page.
 
-  // State field(s) for nombre widget.
-  FocusNode? nombreFocusNode;
-  TextEditingController? nombreTextController;
-  String? Function(BuildContext, String?)? nombreTextControllerValidator;
-  // State field(s) for email widget.
-  FocusNode? emailFocusNode;
-  TextEditingController? emailTextController;
-  String? Function(BuildContext, String?)? emailTextControllerValidator;
-  // State field(s) for cedula widget.
-  FocusNode? cedulaFocusNode;
-  TextEditingController? cedulaTextController;
-  String? Function(BuildContext, String?)? cedulaTextControllerValidator;
-  // State field(s) for FechaExpedicion widget.
-  FocusNode? fechaExpedicionFocusNode;
-  TextEditingController? fechaExpedicionTextController;
+  // State field(s) for estadopension widget.
+  FocusNode? estadopensionFocusNode;
+  TextEditingController? estadopensionTextController;
+  String? Function(BuildContext, String?)? estadopensionTextControllerValidator;
+  // State field(s) for saldopension widget.
+  FocusNode? saldopensionFocusNode;
+  TextEditingController? saldopensionTextController;
+  String? Function(BuildContext, String?)? saldopensionTextControllerValidator;
+  // State field(s) for agendapension widget.
+  FocusNode? agendapensionFocusNode;
+  TextEditingController? agendapensionTextController;
+  String? Function(BuildContext, String?)? agendapensionTextControllerValidator;
+  // State field(s) for fechajubila widget.
+  FocusNode? fechajubilaFocusNode;
+  TextEditingController? fechajubilaTextController;
+  String? Function(BuildContext, String?)? fechajubilaTextControllerValidator;
+  // State field(s) for estadoeps widget.
+  FocusNode? estadoepsFocusNode;
+  TextEditingController? estadoepsTextController;
+  String? Function(BuildContext, String?)? estadoepsTextControllerValidator;
+  // State field(s) for citaspendientes widget.
+  FocusNode? citaspendientesFocusNode;
+  TextEditingController? citaspendientesTextController;
   String? Function(BuildContext, String?)?
-      fechaExpedicionTextControllerValidator;
-  // State field(s) for telefono widget.
-  FocusNode? telefonoFocusNode1;
-  TextEditingController? telefonoTextController1;
-  String? Function(BuildContext, String?)? telefonoTextController1Validator;
-  // State field(s) for telefono widget.
-  FocusNode? telefonoFocusNode2;
-  TextEditingController? telefonoTextController2;
-  String? Function(BuildContext, String?)? telefonoTextController2Validator;
-  // State field(s) for telefono widget.
-  FocusNode? telefonoFocusNode3;
-  TextEditingController? telefonoTextController3;
-  String? Function(BuildContext, String?)? telefonoTextController3Validator;
-  // State field(s) for telefono widget.
-  FocusNode? telefonoFocusNode4;
-  TextEditingController? telefonoTextController4;
-  String? Function(BuildContext, String?)? telefonoTextController4Validator;
-  // State field(s) for telefono widget.
-  FocusNode? telefonoFocusNode5;
-  TextEditingController? telefonoTextController5;
-  String? Function(BuildContext, String?)? telefonoTextController5Validator;
+      citaspendientesTextControllerValidator;
+  // State field(s) for aldiapagos widget.
+  FocusNode? aldiapagosFocusNode;
+  TextEditingController? aldiapagosTextController;
+  String? Function(BuildContext, String?)? aldiapagosTextControllerValidator;
+  // State field(s) for estadoarl widget.
+  FocusNode? estadoarlFocusNode;
+  TextEditingController? estadoarlTextController;
+  String? Function(BuildContext, String?)? estadoarlTextControllerValidator;
+  // State field(s) for incapacidadesvigentes widget.
+  FocusNode? incapacidadesvigentesFocusNode1;
+  TextEditingController? incapacidadesvigentesTextController1;
+  String? Function(BuildContext, String?)?
+      incapacidadesvigentesTextController1Validator;
+  // State field(s) for incapacidadesvigentes widget.
+  FocusNode? incapacidadesvigentesFocusNode2;
+  TextEditingController? incapacidadesvigentesTextController2;
+  String? Function(BuildContext, String?)?
+      incapacidadesvigentesTextController2Validator;
+  // State field(s) for incapacidadesvigentes widget.
+  FocusNode? incapacidadesvigentesFocusNode3;
+  TextEditingController? incapacidadesvigentesTextController3;
+  String? Function(BuildContext, String?)?
+      incapacidadesvigentesTextController3Validator;
+  // State field(s) for incapacidadesvigentes widget.
+  FocusNode? incapacidadesvigentesFocusNode4;
+  TextEditingController? incapacidadesvigentesTextController4;
+  String? Function(BuildContext, String?)?
+      incapacidadesvigentesTextController4Validator;
+  // State field(s) for incapacidadesvigentes widget.
+  FocusNode? incapacidadesvigentesFocusNode5;
+  TextEditingController? incapacidadesvigentesTextController5;
+  String? Function(BuildContext, String?)?
+      incapacidadesvigentesTextController5Validator;
 
   @override
   void initState(BuildContext context) {}
 
   @override
   void dispose() {
-    nombreFocusNode?.dispose();
-    nombreTextController?.dispose();
+    estadopensionFocusNode?.dispose();
+    estadopensionTextController?.dispose();
 
-    emailFocusNode?.dispose();
-    emailTextController?.dispose();
+    saldopensionFocusNode?.dispose();
+    saldopensionTextController?.dispose();
 
-    cedulaFocusNode?.dispose();
-    cedulaTextController?.dispose();
+    agendapensionFocusNode?.dispose();
+    agendapensionTextController?.dispose();
 
-    fechaExpedicionFocusNode?.dispose();
-    fechaExpedicionTextController?.dispose();
+    fechajubilaFocusNode?.dispose();
+    fechajubilaTextController?.dispose();
 
-    telefonoFocusNode1?.dispose();
-    telefonoTextController1?.dispose();
+    estadoepsFocusNode?.dispose();
+    estadoepsTextController?.dispose();
 
-    telefonoFocusNode2?.dispose();
-    telefonoTextController2?.dispose();
+    citaspendientesFocusNode?.dispose();
+    citaspendientesTextController?.dispose();
 
-    telefonoFocusNode3?.dispose();
-    telefonoTextController3?.dispose();
+    aldiapagosFocusNode?.dispose();
+    aldiapagosTextController?.dispose();
 
-    telefonoFocusNode4?.dispose();
-    telefonoTextController4?.dispose();
+    estadoarlFocusNode?.dispose();
+    estadoarlTextController?.dispose();
 
-    telefonoFocusNode5?.dispose();
-    telefonoTextController5?.dispose();
+    incapacidadesvigentesFocusNode1?.dispose();
+    incapacidadesvigentesTextController1?.dispose();
+
+    incapacidadesvigentesFocusNode2?.dispose();
+    incapacidadesvigentesTextController2?.dispose();
+
+    incapacidadesvigentesFocusNode3?.dispose();
+    incapacidadesvigentesTextController3?.dispose();
+
+    incapacidadesvigentesFocusNode4?.dispose();
+    incapacidadesvigentesTextController4?.dispose();
+
+    incapacidadesvigentesFocusNode5?.dispose();
+    incapacidadesvigentesTextController5?.dispose();
   }
 }
